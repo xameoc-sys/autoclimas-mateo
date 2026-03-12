@@ -1495,28 +1495,53 @@
   </footer>
 
   <script>
-    // Form handling
+    // Form handling - Send to WhatsApp
     document.getElementById('quoteForm').addEventListener('submit', function(e) {
       e.preventDefault();
       
       // Get form data
       const formData = new FormData(this);
-      const data = Object.fromEntries(formData.entries());
+      const name = formData.get('name');
+      const phone = formData.get('phone');
+      const email = formData.get('email');
+      const serviceType = formData.get('serviceType');
+      const propertyType = formData.get('propertyType');
+      const description = formData.get('description');
+
+      // Build WhatsApp message
+      const message = `*Nueva Solicitud de Cotización* 👋
+
+*Nombre:* ${name}
+*Teléfono:* ${phone}
+*Email:* ${email || 'No proporcionado'}
+*Tipo de Servicio:* ${serviceType}
+*Marca del Auto:* ${propertyType || 'No proporcionada'}
+*Descripción:* ${description}
+
+---
+Enviado desde el formulario web de Autoclimas Mateo`;
+
+      // Encode message for WhatsApp
+      const encodedMessage = encodeURIComponent(message);
+      
+      // WhatsApp number
+      const whatsappNumber = '523314851420';
+      
+      // Open WhatsApp with pre-filled message
+      window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
 
       // Show success message
       const successMessage = document.getElementById('successMessage');
+      successMessage.innerHTML = '✅ ¡Perfecto! Se abrirá WhatsApp con tu solicitud. ¡Envíanos el mensaje!';
       successMessage.style.display = 'block';
 
       // Reset form
       this.reset();
 
-      // Log data (in production, send to server)
-      console.log('Form submitted:', data);
-
-      // Hide message after 5 seconds
+      // Hide message after 8 seconds
       setTimeout(() => {
         successMessage.style.display = 'none';
-      }, 5000);
+      }, 8000);
     });
 
     // Smooth scroll for navigation
