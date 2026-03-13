@@ -442,6 +442,110 @@
       font-size: 0.95rem;
     }
 
+    /* Reviews Section */
+    .reviews {
+      padding: 6rem 2rem;
+      background: var(--cool-white);
+    }
+
+    .reviews-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .reviews-header h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .google-rating {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .stars {
+      color: #FBBF24;
+      font-size: 1.5rem;
+    }
+
+    .rating-text {
+      color: var(--gray);
+      font-size: 1rem;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .review-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .review-avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    .review-info h4 {
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .review-stars {
+      color: #FBBF24;
+      font-size: 0.9rem;
+    }
+
+    .review-text {
+      color: var(--gray);
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .review-date {
+      color: #94A3B8;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .reviews {
+        padding: 3rem 1rem;
+      }
+      .reviews-header h2 {
+        font-size: 1.75rem;
+      }
+      .reviews-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
     /* Blog Section */
     .blog {
       padding: 6rem 2rem;
@@ -1363,6 +1467,7 @@
     <ul class="nav-links">
       <li><a href="#servicios">Servicios</a></li>
       <li><a href="#blog">Blog</a></li>
+      <li><a href="#resenas">Reseñas</a></li>
       <li><a href="#contacto">Contacto</a></li>
       <li><a href="#ubicacion">Ubicación</a></li>
     </ul>
@@ -1614,6 +1719,80 @@
           <p class="blog-excerpt">Aprende cuándo debes detener el uso del aire acondicionado inmediatamente.</p>
           <a href="blog/senales-emergencia.html" class="blog-link">Leer más →</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews" id="resenas">
+    <div class="reviews-header">
+      <h2>⭐ Reseñas de Clientes</h2>
+      <p>Lo que dicen nuestros clientes sobre nosotros</p>
+      <div class="google-rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating-text">5.0 · Basado en reseñas de Google</span>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">MR</div>
+          <div class="review-info">
+            <h4>Miguel Rodríguez</h4>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Excelente servicio. El aire acondicionado de mi carro no enfriaba y en menos de una hora lo dejaron funcionando perfecto. Muy profesionales y atentos. Recomendados al 100%.</p>
+        <p class="review-date">Hace 2 semanas</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">LC</div>
+          <div class="review-info">
+            <h4>Laura Campos</h4>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Muy contenta con el servicio. Me explican todo detalladamente y no cobran de más. El técnico fue muy amable y el trabajo quedó garantizado. Volveré sin duda.</p>
+        <p class="review-date">Hace 1 mes</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">JG</div>
+          <div class="review-info">
+            <h4>Jorge García</h4>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Llevé mi truck para carga de gas y revisión. Todo muy bien, buen precio y atención inmediata. El aire ahora enfría como cuando era nuevo. Gracias!</p>
+        <p class="review-date">Hace 1 mes</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">AP</div>
+          <div class="review-info">
+            <h4>Ana Pérez</h4>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Mi esposo y yo quedamos muy satisfechos. El auto tenía varios días sin aire y lo arreglaron en el mismo día. Personal capacitado y herramientas adecuadas. Altamente recomendable.</p>
+        <p class="review-date">Hace 2 meses</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-header">
+          <div class="review-avatar">DM</div>
+          <div class="review-info">
+            <h4>David Martínez</h4>
+            <div class="review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p class="review-text">Mejor taller de AC automotriz en Tonalá. Atendimento de primera, precios justos y garantía escrita. Ya les llevé 2 carros de mi familia y siempre quedan impecables.</p>
+        <p class="review-date">Hace 3 meses</p>
       </div>
     </div>
   </section>
