@@ -79,6 +79,16 @@
     footer { background: var(--dark); color: white; padding: 2rem; text-align: center; }
     footer p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin: 0; }
     
+    /* Related section */
+    .related-section { margin-top: 2rem; }
+    .related-section h3 { color: var(--dark); margin-bottom: 1rem; font-size: 1.25rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .related-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+    .related-card-content { padding: 1rem; }
+    .related-card h4 { color: var(--primary); font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.4; }
+    .related-card p { color: var(--gray); font-size: 0.85rem; margin: 0; }
+    
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .article-header h1 { font-size: 1.5rem; }
@@ -200,6 +210,30 @@
         <h3>¿Tu A/C está funcionando correctamente?</h3>
         <p>Un sistema bien mantenido no solo enfría mejor, sino que también ahorra combustible.</p>
         <a href="https://wa.me/523314851420" target="_blank">Revisión Gratis por WhatsApp</a>
+      </div>
+
+      <div class="related-section">
+        <h3>También te podría interesar</h3>
+        <div class="related-grid">
+          <a href="/blog/ahorrar-bateria-combustible-ac.html" class="related-card">
+            <div class="related-card-content">
+              <h4>Cómo Ahorrar Batería y Combustible</h4>
+              <p>Consejos prácticos para maximizar la eficiencia del A/C.</p>
+            </div>
+          </a>
+          <a href="/blog/mantenimiento-preventivo.html" class="related-card">
+            <div class="related-card-content">
+              <h4>Mantenimiento Preventivo del A/C</h4>
+              <p>Guía completa para cuidar tu sistema de aire acondicionado.</p>
+            </div>
+          </a>
+          <a href="/blog/ac-automatico-vs-manual.html" class="related-card">
+            <div class="related-card-content">
+              <h4>A/C Automático vs Manual</h4>
+              <p>Diferencias y ventajas de cada sistema.</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>

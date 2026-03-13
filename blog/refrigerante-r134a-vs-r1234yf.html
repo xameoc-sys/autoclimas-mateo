@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Problemas Comunes del Aire Acondicionado Automotriz | Autoclimas Mateo</title>
+  <title>Refrigerante R-134a vs R-1234yf: Diferencias y Qué Usa Tu Auto | Autoclimas Mateo</title>
+  <meta name="description" content="Conoce las diferencias entre el refrigerante R-134a y el nuevo R-1234yf. Averigua cuál usa tu vehículo y por qué el cambio es importante para el medio ambiente.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconvert" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
@@ -48,20 +49,21 @@
     .article-meta a:hover { text-decoration: underline; }
     .article-content { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
     .article-content h2 { color: var(--primary); margin: 2rem 0 1rem; font-size: 1.4rem; font-weight: 700; }
+    .article-content h3 { color: var(--dark); margin: 1.5rem 0 0.75rem; font-weight: 600; }
     .article-content p { margin-bottom: 1rem; color: var(--dark-light); }
-    .article-content ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+    .article-content ul, .article-content ol { margin-left: 1.5rem; margin-bottom: 1rem; }
     .article-content li { margin-bottom: 0.5rem; color: var(--dark-light); }
     
-    .problem-card { border: 2px solid #E2E8F0; border-radius: 16px; padding: 1.25rem; margin: 1rem 0; }
-    .problem-card.serious { border-color: var(--danger); background: rgba(229,57,53,0.05); }
-    .problem-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
-    .problem-icon { font-size: 1.5rem; }
-    .problem-title { font-weight: 700; color: var(--dark); }
-    .causes { background: var(--gray-light); padding: 1rem; border-radius: 8px; margin: 1rem 0; }
-    .causes strong { color: var(--gray); font-size: 0.9rem; display: block; margin-bottom: 0.5rem; }
-    .causes ul { margin: 0; }
-    .solution { background: rgba(16,185,129,0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--success); }
-    .solution strong { color: var(--success); }
+    .highlight { background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(0,119,182,0.1)); padding: 1.25rem; border-radius: 12px; border-left: 4px solid var(--primary); margin: 1.5rem 0; }
+    .highlight strong { color: var(--primary); }
+    
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+    .comparison-table th, .comparison-table td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--gray-light); }
+    .comparison-table th { background: var(--primary); color: white; font-weight: 600; }
+    .comparison-table tr:nth-child(even) { background: var(--gray-light); }
+    
+    .eco-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: #D1FAE5; color: #065F46; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600; font-size: 0.9rem; margin: 1rem 0; }
+    .eco-badge span { font-size: 1.2rem; }
     
     .cta-box { background: var(--dark); color: white; padding: 2rem; border-radius: 16px; text-align: center; margin: 2rem 0; }
     .cta-box h3 { color: white; margin-bottom: 0.75rem; }
@@ -69,10 +71,6 @@
     .cta-box a { display: inline-block; background: #25D366; color: white; padding: 0.875rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s; }
     .cta-box a:hover { transform: translateY(-2px); }
     
-    footer { background: var(--dark); color: white; padding: 2rem; text-align: center; }
-    footer p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin: 0; }
-    
-    /* Related section */
     .related-section { margin-top: 2rem; }
     .related-section h3 { color: var(--dark); margin-bottom: 1rem; font-size: 1.25rem; }
     .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
@@ -82,10 +80,14 @@
     .related-card h4 { color: var(--primary); font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.4; }
     .related-card p { color: var(--gray); font-size: 0.85rem; margin: 0; }
     
+    footer { background: var(--dark); color: white; padding: 2rem; text-align: center; }
+    footer p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin: 0; }
+    
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .article-header h1 { font-size: 1.5rem; }
       .article-content { padding: 1.5rem; }
+      .comparison-table { font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -111,113 +113,85 @@
 
   <div class="article-container">
     <div class="article-header">
-      <h1>Problemas Comunes del Aire Acondicionado Automotriz</h1>
-      <p class="article-meta">5 de enero de 2025 · <a href="/">Volver al inicio</a></p>
+      <h1>Refrigerante R-134a vs R-1234yf: ¿Cuál Usa Tu Auto?</h1>
+      <p class="article-meta">13 de marzo de 2026 · <a href="/">Volver al inicio</a></p>
     </div>
     
     <div class="article-content">
-      <p>El sistema de aire acondicionado de tu auto puede presentar diversas fallas con el tiempo. Aquí te mostramos los problemas más comunes, sus causas y cómo solucionarlos.</p>
+      <p>Si has llevado tu auto al servicio de aire acondicionado, probablemente has escuchado sobre el R-134a y el R-1234yf. Estos son los dos tipos de refrigerante más comunes en vehículos modernos. Te explicamos todo lo que necesitas saber.</p>
 
-      <div class="problem-card serious">
-        <div class="problem-header">
-          <span class="problem-icon">🚨</span>
-          <span class="problem-title">1. A/C No Enciende</span>
-        </div>
-        <div class="causes">
-          <strong>Causas posibles:</strong>
-          <ul>
-            <li>Fusible quemado del sistema de A/C</li>
-            <li>Problema en el relay del compresor</li>
-            <li>Falla en el interruptor de presión</li>
-            <li>Problemas en el módulo de control</li>
-          </ul>
-        </div>
-        <div class="solution">
-          <strong>Solución:</strong> Requiere diagnóstico profesional. No intentes repararlo por tu cuenta.
-        </div>
+      <div class="eco-badge">
+        <span>🌱</span> Información importante para el medio ambiente
       </div>
 
-      <div class="problem-card">
-        <div class="problem-header">
-          <span class="problem-icon">🌡️</span>
-          <span class="problem-title">2. Aire Tibio o Caliente</span>
-        </div>
-        <div class="causes">
-          <strong>Causas posibles:</strong>
-          <ul>
-            <li>Nivel bajo de refrigerante (gas)</li>
-            <li>Compresor dañado o defectuoso</li>
-            <li>Obstrucción en el sistema</li>
-            <li>Termostato malfunctionando</li>
-          </ul>
-        </div>
-        <div class="solution">
-          <strong>Solución:</strong> Llévalo a revisar. Probablemente necesite recarga de gas o reparación del compresor.
-        </div>
+      <h2>¿Qué es un Refrigerante?</h2>
+      <p>El refrigerante es el líquido que circula por el sistema de A/C y permite transferir calor. Sin él, tu aire acondicionado no podría enfriar el aire. Durante años, el R-134a fue el estándar de la industria automotriz, pero las regulaciones ambientales han impulsado un cambio hacia opciones más sostenibles.</p>
+
+      <h2>Comparación: R-134a vs R-1234yf</h2>
+      <table class="comparison-table">
+        <tr>
+          <th>Característica</th>
+          <th>R-134a</th>
+          <th>R-1234yf</th>
+        </tr>
+        <tr>
+          <td><strong>Uso</strong></td>
+          <td>Autos anteriores a 2017</td>
+          <td>Autos 2017 en adelante</td>
+        </tr>
+        <tr>
+          <td><strong>Impacto ambiental</strong></td>
+          <td>Alto (GWP 1430)</td>
+          <td>Muy bajo (GWP 4)</td>
+        </tr>
+        <tr>
+          <td><strong>Costo</strong></td>
+          <td>Más económico</td>
+          <td>Más caro</td>
+        </tr>
+        <tr>
+          <td><strong>Eficiencia</strong></td>
+          <td>Buena</td>
+          <td>Excelente</td>
+        </tr>
+        <tr>
+          <td><strong>Disponibilidad</strong></td>
+          <td>Amplia</td>
+          <td>En aumento</td>
+        </tr>
+      </table>
+
+      <div class="highlight">
+        <strong>¿Qué significa GWP?</strong> Es el "Potencial de Calentamiento Global". Mientras más alto el número, más contribuye al calentamiento global. El R-1234yf tiene un GWP de solo 4, casi 360 veces menos que el R-134a.
       </div>
 
-      <div class="problem-card">
-        <div class="problem-header">
-          <span class="problem-icon">🔊</span>
-          <span class="problem-title">3. Ruidos y Vibraciones</span>
-        </div>
-        <div class="causes">
-          <strong>Causas posibles:</strong>
-          <ul>
-            <li>Piezas sueltas en el compresor</li>
-            <li>Correa dañada o floja</li>
-            <li>Rodamientos desgastados</li>
-            <li>Objetos extraños en el ventilador</li>
-          </ul>
-        </div>
-        <div class="solution">
-          <strong>Solución:</strong> Evita usar el A/C y llévalo a revisión inmediatamente para evitar daños mayores.
-        </div>
+      <h2>¿Qué Refrigerante Usa Tu Auto?</h2>
+      <ul>
+        <li><strong>Autos 2016 o anteriores:</strong> Muy probablemente usan R-134a</li>
+        <li><strong>Autos 2017 en adelante:</strong> La mayoría usa R-1234yf</li>
+        <li><strong> некоторые modelos hybrids:</strong> Pueden usar R-1234yf incluso antes de 2017</li>
+      </ul>
+      <p>La etiqueta bajo el cofre de tu auto usually indica el tipo de refrigerante. Si no la encuentras, podemos ayudarte a identificarla.</p>
+
+      <h2>¿Puedes Cambiar de un Refrigerante a Otro?</h2>
+      <div class="highlight">
+        <strong>¡No lo intentes por tu cuenta!</strong> Los sistemas están diseñados para un refrigerante específico. Mezclarlos puede dañar el compresor y anular la garantía de tu vehículo.
       </div>
 
-      <div class="problem-card">
-        <div class="problem-header">
-          <span class="problem-icon">💧</span>
-          <span class="problem-title">4. Agua dentro del Auto</span>
-        </div>
-        <div class="causes">
-          <strong>Causas posibles:</strong>
-          <ul>
-            <li>Drenaje del evaporador obstruido</li>
-            <li>Manguera de drenaje dañada</li>
-            <li>Entrada de agua por juntas de puertas</li>
-          </ul>
-        </div>
-        <div class="solution">
-          <strong>Solución:</strong> Limpia el drenaje del evaporador. Si persiste, requiere servicio profesional.
-        </div>
-      </div>
-
-      <div class="problem-card">
-        <div class="problem-header">
-          <span class="problem-icon">🐛</span>
-          <span class="problem-title">5. Mal Olor</span>
-        </div>
-        <div class="causes">
-          <strong>Causas posibles:</strong>
-          <ul>
-            <li>Bacterias y hongos en el evaporador</li>
-            <li>Filtro de cabina sucio</li>
-            <li>Hojas o debris en la caja de ventilación</li>
-          </ul>
-        </div>
-        <div class="solution">
-          <strong>Solución:</strong> Cambio de filtro y limpieza del sistema de ventilación con productos sanitizadores.
-        </div>
-      </div>
-
-      <h2>¿Cuándo Ir al Especialista?</h2>
-      <p>Si notas alguno de estos problemas, es mejor actuar rápido. Cuanto más esperes, más costosa puede ser la reparación.</p>
+      <h2>Por Qué el Cambio al R-1234yf</h2>
+      <p>La Unión Europea y otros países implementaron regulaciones estrictas (como la norma MAC) para reducir las emisiones de gases de efecto invernadero. México también está adoptando estos estándares gradualmente.</p>
+      <p>Aunque el R-1234yf es más caro, ofrece ventajas:</p>
+      <ul>
+        <li>Mayor eficiencia energética</li>
+        <li>Menor consumo de combustible</li>
+        <li>Cumplimiento con normativas ambientales</li>
+        <li>Menor impacto en el calentamiento global</li>
+      </ul>
 
       <div class="cta-box">
-        <h3>¿Tu A/C tiene alguno de estos problemas?</h3>
-        <p>Ofrecemos diagnóstico gratuito y presupuestos sin compromiso.</p>
-        <a href="https://wa.me/523314851420" target="_blank">Diagnóstico Gratis por WhatsApp</a>
+        <h3>¿No Sabes Qué Refrigerante Usa Tu Auto?</h3>
+        <p>Contáctanos y te ayudamos a identificarlo.同时 también，我们可以执行refrigerante充值服务如果需要的话。</p>
+        <a href="https://wa.me/523314851420" target="_blank">Consultar por WhatsApp</a>
       </div>
 
       <div class="related-section">
@@ -226,19 +200,19 @@
           <a href="/blog/mantenimiento-preventivo.html" class="related-card">
             <div class="related-card-content">
               <h4>Mantenimiento Preventivo del A/C</h4>
-              <p>Guía completa para cuidar tu sistema de aire acondicionado.</p>
+              <p>Guía completa para cuidar el sistema de aire acondicionado de tu auto.</p>
+            </div>
+          </a>
+          <a href="/blog/problemas-comunes.html" class="related-card">
+            <div class="related-card-content">
+              <h4>Problemas Comunes del A/C</h4>
+              <p>Las fallas más frecuentes y cómo evitarlas.</p>
             </div>
           </a>
           <a href="/blog/diagnosticar-problemas-ac.html" class="related-card">
             <div class="related-card-content">
               <h4>Cómo Diagnosticar Problemas del A/C</h4>
-              <p>Aprende a identificar fallas antes de visitar el taller.</p>
-            </div>
-          </a>
-          <a href="/blog/olor-ac-coche.html" class="related-card">
-            <div class="related-card-content">
-              <h4>Por Qué el A/C Huele Mal</h4>
-              <p>Causas y soluciones para olores del aire acondicionado.</p>
+              <p>Aprende a identificar fallas antes de ir al taller.</p>
             </div>
           </a>
         </div>

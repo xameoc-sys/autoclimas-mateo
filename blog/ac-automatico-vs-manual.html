@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A/C Automático vs Manual: Diferencias y Ventajas | Autoclimas Mateo</title>
+  <meta name="description" content="Descubre las diferencias entre el aire acondicionado automático y manual para tu auto. Conoce las ventajas de cada sistema y cuál conviene más a tus necesidades.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0077B6;
+      --primary-dark: #005A8D;
+      --accent: #00B4D8;
+      --accent-light: #90E0EF;
+      --cool-white: #F8FCFD;
+      --white: #FFFFFF;
+      --dark: #0A1628;
+      --dark-light: #1E293B;
+      --gray: #64748B;
+      --gray-light: #F1F5F9;
+      --success: #10B981;
+      --warning: #F59E0B;
+      --danger: #E53935;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--gray-light); color: var(--dark); line-height: 1.7; }
+    
+    nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); z-index: 1000; padding: 0.75rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    nav .container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.25rem; font-weight: 800; color: var(--dark); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .logo-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .logo-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--gray); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+    
+    .banner { width: 100%; padding: 0.5rem; background: linear-gradient(135deg, #0A1628, #1a365d); text-align: center; margin-top: 60px; }
+    .banner img { max-width: 100%; max-height: 80px; border-radius: 8px; }
+
+    .article-container { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--dark); line-height: 1.2; }
+    .article-meta { color: var(--gray); font-size: 0.9rem; }
+    .article-meta a { color: var(--primary); text-decoration: none; }
+    .article-meta a:hover { text-decoration: underline; }
+    .article-content { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .article-content h2 { color: var(--primary); margin: 2rem 0 1rem; font-size: 1.4rem; font-weight: 700; }
+    .article-content h3 { color: var(--dark); margin: 1.5rem 0 0.75rem; font-weight: 600; }
+    .article-content p { margin-bottom: 1rem; color: var(--dark-light); }
+    .article-content ul, .article-content ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+    .article-content li { margin-bottom: 0.5rem; color: var(--dark-light); }
+    
+    .comparison-box { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
+    .system-card { background: var(--gray-light); padding: 1.5rem; border-radius: 12px; }
+    .system-card h3 { color: var(--primary); margin-bottom: 1rem; text-align: center; }
+    .system-card ul { list-style: none; margin: 0; padding: 0; }
+    .system-card li { padding: 0.5rem 0; border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; align-items: center; gap: 0.5rem; }
+    .system-card li:last-child { border-bottom: none; }
+    .check { color: var(--success); }
+    .cross { color: var(--danger); }
+    
+    .procon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .pro-item { background: #D1FAE5; padding: 1rem; border-radius: 8px; text-align: center; }
+    .pro-item h4 { color: #065F46; margin-bottom: 0.5rem; }
+    .pro-item p { color: #065F46; font-size: 0.9rem; margin: 0; }
+    .con-item { background: #FEE2E2; padding: 1rem; border-radius: 8px; text-align: center; }
+    .con-item h4 { color: #991B1B; margin-bottom: 0.5rem; }
+    .con-item p { color: #991B1B; font-size: 0.9rem; margin: 0; }
+    
+    .highlight { background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(0,119,182,0.1)); padding: 1.25rem; border-radius: 12px; border-left: 4px solid var(--primary); margin: 1.5rem 0; }
+    .highlight strong { color: var(--primary); }
+    
+    .cta-box { background: var(--dark); color: white; padding: 2rem; border-radius: 16px; text-align: center; margin: 2rem 0; }
+    .cta-box h3 { color: white; margin-bottom: 0.75rem; }
+    .cta-box p { color: rgba(255,255,255,0.8); margin-bottom: 1rem; }
+    .cta-box a { display: inline-block; background: #25D366; color: white; padding: 0.875rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s; }
+    .cta-box a:hover { transform: translateY(-2px); }
+    
+    .related-section { margin-top: 2rem; }
+    .related-section h3 { color: var(--dark); margin-bottom: 1rem; font-size: 1.25rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .related-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+    .related-card-content { padding: 1rem; }
+    .related-card h4 { color: var(--primary); font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.4; }
+    .related-card p { color: var(--gray); font-size: 0.85rem; margin: 0; }
+    
+    footer { background: var(--dark); color: white; padding: 2rem; text-align: center; }
+    footer p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin: 0; }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .article-header h1 { font-size: 1.5rem; }
+      .article-content { padding: 1.5rem; }
+      .comparison-box { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">
+        <div class="logo-icon"><img src="../images/logo.webp" alt="Autoclimas Mateo"></div>
+        Autoclimas Mateo
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#servicios">Servicios</a></li>
+        <li><a href="/#blog">Blog</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+      </ul>
+      <a href="https://wa.me/523314851420" class="nav-cta" target="_blank">WhatsApp</a>
+    </div>
+  </nav>
+
+  <div class="banner">
+    <img src="../images/banner.png" alt="Autoclimas Mateo">
+  </div>
+
+  <div class="article-container">
+    <div class="article-header">
+      <h1>A/C Automático vs Manual: ¿Cuál Conviene?</h1>
+      <p class="article-meta">13 de marzo de 2026 · <a href="/">Volver al inicio</a></p>
+    </div>
+    
+    <div class="article-content">
+      <p>Al comprar un auto o cambiar el sistema de aire acondicionado, surge la pregunta: ¿manual o automático? Te ayudamos a entender las diferencias para que tomes la mejor decisión.</p>
+
+      <h2>¿En Qué Se Diferencian?</h2>
+      
+      <div class="comparison-box">
+        <div class="system-card">
+          <h3>🔧 A/C Manual</h3>
+          <ul>
+            <li><span class="cross">✗</span> Temperatura ajustada manualmente</li>
+            <li><span class="cross">✗</span> Velocidad del ventilador manual</li>
+            <li><span class="check">✓</span> Controles físicos (perillas)</li>
+            <li><span class="check">✓</span> Más económico de reparar</li>
+            <li><span class="check">✓</span> Simpler mantenimiento</li>
+          </ul>
+        </div>
+        <div class="system-card">
+          <h3>🤖 A/C Automático</h3>
+          <li><span class="check">✓</span> Temperatura estable automática</li>
+          <li><span class="check">✓</span> Velocidad del ventilador automática</li>
+          <li><span class="cross">✗</span> Controles digitales/pantalla</li>
+          <li><span class="cross">✗</span> Mayor costo de reparación</li>
+          <li><span class="check">✓</span> Mayor comodidad</li>
+        </div>
+      </div>
+
+      <h2>Ventajas del A/C Automático</h2>
+      <div class="procon-grid">
+        <div class="pro-item">
+          <h4>🌡️ Temperatura Constante</h4>
+          <p>El sistema ajusta automáticamente la potencia para mantener la temperatura seleccionada.</p>
+        </div>
+        <div class="pro-item">
+          <h4>🔇 Más Silencioso</h4>
+          <p>Regula la velocidad del ventilador según la necesidad, reduciendo ruido.</p>
+        </div>
+        <div class="pro-item">
+          <h4>⛽ Eficiencia</h4>
+          <p>Optimiza el consumo de energía y combustible automáticamente.</p>
+        </div>
+        <div class="pro-item">
+          <h4>✨ Comodidad</h4>
+          <p>Solo configuras la temperatura y olvidas el resto.</p>
+        </div>
+      </div>
+
+      <h2>Desventajas del A/C Automático</h2>
+      <div class="procon-grid">
+        <div class="con-item">
+          <h4>💰 Costo Inicial</h4>
+          <p>Suele venir solo en paquetes más equipados o autos de gama media-alta.</p>
+        </div>
+        <div class="con-item">
+          <h4>🔧 Reparaciones</h4>
+          <p>Los sensores y módulos electrónicos son más costosos de reparar.</p>
+        </div>
+        <div class="con-item">
+          <h4>⚡ Sensores</h4>
+          <p>Más componentes que pueden fallar (sensores de temperatura, actuadores).</p>
+        </div>
+      </div>
+
+      <h2>¿Puedo Convertir Mi A/C Manual a Automático?</h2>
+      <p>Sí, es posible, pero requiere:</p>
+      <ul>
+        <li>Instalar un nuevo panel de controles automático</li>
+        <li>Cambiar los actuadores de las compuertas</li>
+        <li>Agregar sensores de temperatura (habitáculo y exterior)</li>
+        <li>Actualizar el cableado del sistema</li>
+      </ul>
+      <p>El costo varía dependiendo del modelo del auto, pero generalmente es una inversión significativa.</p>
+
+      <div class="highlight">
+        <strong>Consejo:</strong> Si tu auto tiene A/C manual y funciona bien, no es necesario cambiarlo. La diferencia en comodidad no justifica el costo a menos que tengas un presupuesto específico para ello.
+      </div>
+
+      <h2>¿Cuál Elegir?</h2>
+      <p><strong>Elige manual si:</strong></p>
+      <ul>
+        <li>Tienes un presupuesto limitado</li>
+        <li>Prefieres el control total del sistema</li>
+        <li>Tu auto es antiguo y el sistema actual funciona bien</li>
+      </ul>
+      <p><strong>Elige automático si:</strong></p>
+      <ul>
+        <li>Comodidad es tu prioridad</li>
+        <li>Compraste o vas a comprar un auto nuevo/ seminuevo</li>
+        <li>Valoras la temperatura constante y el silencio</li>
+      </ul>
+
+      <div class="cta-box">
+        <h3>¿Tienes Dudas Sobre Tu Sistema de A/C?</h3>
+        <p>Contáctanos para una evaluación y te asesoramos sobre la mejor opción para tu auto.</p>
+        <a href="https://wa.me/523314851420" target="_blank">Consultar por WhatsApp</a>
+      </div>
+
+      <div class="related-section">
+        <h3>También te podría interesar</h3>
+        <div class="related-grid">
+          <a href="/blog/mantenimiento-preventivo.html" class="related-card">
+            <div class="related-card-content">
+              <h4>Mantenimiento Preventivo del A/C</h4>
+              <p>Guía completa para cuidar tu sistema de aire acondicionado.</p>
+            </div>
+          </a>
+          <a href="/blog/problemas-comunes.html" class="related-card">
+            <div class="related-card-content">
+              <h4>Problemas Comunes del A/C</h4>
+              <p>Las fallas más frecuentes y cómo evitarlas.</p>
+            </div>
+          </a>
+          <a href="/blog/ahorrar-combustible.html" class="related-card">
+            <div class="related-card-content">
+              <h4>Cómo Ahorrar Combustible con el A/C</h4>
+              <p>Consejos para usar el aire acondicionado eficientemente.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Autoclimas Mateo | Aire Acondicionado Automotriz en Tonalá</p>
+  </footer>
+</body>
+</html>

@@ -98,6 +98,16 @@
     .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; margin: 2rem 0; }
     .stat-box { background: var(--dark); color: white; padding: 1.25rem; border-radius: 12px; }
     .stat-number { font-size: 1.75rem; font-weight: 800; color: var(--accent); }
+    
+    /* Related section */
+    .related-section { margin-top: 2rem; }
+    .related-section h3 { color: var(--dark); margin-bottom: 1rem; font-size: 1.25rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .related-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+    .related-card-content { padding: 1rem; }
+    .related-card h4 { color: var(--primary); font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.4; }
+    .related-card p { color: var(--gray); font-size: 0.85rem; margin: 0; }
     .stat-label { font-size: 0.8rem; opacity: 0.8; }
     
     /* Myth/Fact boxes */
@@ -202,6 +212,30 @@
         <h3>¿Tu aire acondicionado presenta alguna de estas señales?</h3>
         <p>En Autoclimas Mateo ofrecemos diagnóstico gratuito y servicio profesional garantizado.</p>
         <a href="https://wa.me/523314851420" target="_blank">Contactar por WhatsApp</a>
+      </div>
+
+      <div class="related-section">
+        <h3>También te podría interesar</h3>
+        <div class="related-grid">
+          <a href="/blog/diagnosticar-problemas-ac.html" class="related-card">
+            <div class="related-card-content">
+              <h4>Cómo Diagnosticar Problemas del A/C</h4>
+              <p>Aprende a identificar fallas antes de visitar el taller.</p>
+            </div>
+          </a>
+          <a href="/blog/mantenimiento-preventivo.html" class="related-card">
+            <div class="related-card-content">
+              <h4>Guía de Mantenimiento Preventivo</h4>
+              <p>Todo lo que debes saber para mantener tu A/C en óptimas condiciones.</p>
+            </div>
+          </a>
+          <a href="/blog/olor-ac-coche.html" class="related-card">
+            <div class="related-card-content">
+              <h4>Por Qué el A/C Huele Mal</h4>
+              <p>Causas comunes y soluciones para olores del aire acondicionado.</p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>

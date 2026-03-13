@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo Ahorrar Batería y Combustible con el A/C del Auto | Autoclimas Mateo</title>
+  <meta name="description" content="Aprende a usar el aire acondicionado de tu auto de manera eficiente para ahorrar batería y combustible. Consejos prácticos para maximizar el rendimiento.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0077B6;
+      --primary-dark: #005A8D;
+      --accent: #00B4D8;
+      --accent-light: #90E0EF;
+      --cool-white: #F8FCFD;
+      --white: #FFFFFF;
+      --dark: #0A1628;
+      --dark-light: #1E293B;
+      --gray: #64748B;
+      --gray-light: #F1F5F9;
+      --success: #10B981;
+      --warning: #F59E0B;
+      --danger: #E53935;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--gray-light); color: var(--dark); line-height: 1.7; }
+    
+    nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); z-index: 1000; padding: 0.75rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    nav .container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.25rem; font-weight: 800; color: var(--dark); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .logo-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .logo-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--gray); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+    
+    .banner { width: 100%; padding: 0.5rem; background: linear-gradient(135deg, #0A1628, #1a365d); text-align: center; margin-top: 60px; }
+    .banner img { max-width: 100%; max-height: 80px; border-radius: 8px; }
+
+    .article-container { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--dark); line-height: 1.2; }
+    .article-meta { color: var(--gray); font-size: 0.9rem; }
+    .article-meta a { color: var(--primary); text-decoration: none; }
+    .article-meta a:hover { text-decoration: underline; }
+    .article-content { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .article-content h2 { color: var(--primary); margin: 2rem 0 1rem; font-size: 1.4rem; font-weight: 700; }
+    .article-content h3 { color: var(--dark); margin: 1.5rem 0 0.75rem; font-weight: 600; }
+    .article-content p { margin-bottom: 1rem; color: var(--dark-light); }
+    .article-content ul, .article-content ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+    .article-content li { margin-bottom: 0.5rem; color: var(--dark-light); }
+    
+    .tip-box { background: var(--gray-light); padding: 1.25rem; border-radius: 12px; margin: 1.5rem 0; }
+    .tip-box h4 { color: var(--primary); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .tip-box p { margin: 0; }
+    
+    .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .stat-card { background: var(--primary); color: white; padding: 1.5rem; border-radius: 12px; text-align: center; }
+    .stat-number { font-size: 2rem; font-weight: 800; display: block; }
+    .stat-label { font-size: 0.85rem; opacity: 0.9; }
+    
+    .highlight { background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(0,119,182,0.1)); padding: 1.25rem; border-radius: 12px; border-left: 4px solid var(--primary); margin: 1.5rem 0; }
+    .highlight strong { color: var(--primary); }
+    
+    .warning-box { background: #FEF3C7; border-left: 4px solid var(--warning); padding: 1.25rem; border-radius: 12px; margin: 1.5rem 0; }
+    .warning-box h4 { color: var(--warning); margin-bottom: 0.5rem; }
+    .warning-box p { margin: 0; }
+    
+    .cta-box { background: var(--dark); color: white; padding: 2rem; border-radius: 16px; text-align: center; margin: 2rem 0; }
+    .cta-box h3 { color: white; margin-bottom: 0.75rem; }
+    .cta-box p { color: rgba(255,255,255,0.8); margin-bottom: 1rem; }
+    .cta-box a { display: inline-block; background: #25D366; color: white; padding: 0.875rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s; }
+    .cta-box a:hover { transform: translateY(-2px); }
+    
+    .related-section { margin-top: 2rem; }
+    .related-section h3 { color: var(--dark); margin-bottom: 1rem; font-size: 1.25rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .related-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+    .related-card-content { padding: 1rem; }
+    .related-card h4 { color: var(--primary); font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.4; }
+    .related-card p { color: var(--gray); font-size: 0.85rem; margin: 0; }
+    
+    footer { background: var(--dark); color: white; padding: 2rem; text-align: center; }
+    footer p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin: 0; }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .article-header h1 { font-size: 1.5rem; }
+      .article-content { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="/" class="logo">
+        <div class="logo-icon"><img src="../images/logo.webp" alt="Autoclimas Mateo"></div>
+        Autoclimas Mateo
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#servicios">Servicios</a></li>
+        <li><a href="/#blog">Blog</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+      </ul>
+      <a href="https://wa.me/523314851420" class="nav-cta" target="_blank">WhatsApp</a>
+    </div>
+  </nav>
+
+  <div class="banner">
+    <img src="../images/banner.png" alt="Autoclimas Mateo">
+  </div>
+
+  <div class="article-container">
+    <div class="article-header">
+      <h1>Cómo Ahorrar Batería y Combustible con el A/C</h1>
+      <p class="article-meta">13 de marzo de 2026 · <a href="/">Volver al inicio</a></p>
+    </div>
+    
+    <div class="article-content">
+      <p>El aire acondicionado es uno de los mayores consumidores de energía en tu auto. Aprender a usarlo correctamente puede ayudarte a ahorrar combustible y prolongar la vida de tu batería.</p>
+
+      <h2>¿Cuánto Consume el A/C?</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">10-15%</span>
+          <span class="stat-label">Del consumo de combustible</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">1-2 mpg</span>
+          <span class="stat-label">Reducción de rendimiento</span>
+        </div>
+      </div>
+
+      <h2>10 Consejos para Usar el A/C Eficientemente</h2>
+      
+      <div class="tip-box">
+        <h4>🌡️ 1. Configura la temperatura correcta</h4>
+        <p>No pongas el A/C al mínimo. Una diferencia de 4-5°C respecto a la temperatura exterior es suficiente. Entre 22-24°C es el rango ideal.</p>
+      </div>
+      
+      <div class="tip-box">
+        <h4>🔄 2. Usa la función AUTO</h4>
+        <p>Si tu auto tiene A/C automático, úsalo.调节会自动优化消耗，而不是手动一直保持最大功率。</p>
+      </div>
+      
+      <div class="tip-box">
+        <h4>♻️ 3. Evita la recirculación constante</h4>
+        <p>Usa la recirculación solo cuando haga mucho calor afuera. En condiciones normales, el modo fresco trae aire fresco del exterior y es más eficiente.</p>
+      </div>
+      
+      <div class="tip-box">
+        <h4>❄️ 4. Enfría antes de activar el A/C</h4>
+        <p>Abre las ventanas unos segundos para dejar salir el aire caliente antes de encender el A/C. Esto reduce la carga inicial.</p>
+      </div>
+      
+      <div class="tip-box">
+        <h4>⏰ 5. No enciendas el A/C al iniciar</h4>
+        <p>Espera unos minutos a que el motor se caliente un poco. El A/C funciona mejor y consume menos cuando el motor está en temperatura de operación.</p>
+      </div>
+      
+      <div class="tip-box">
+        <h4>🔋 6. Apaga el A/C antes de apagar el motor</h4>
+        <p>Esto permite que el sistema se seque y evita humedad acumulada. Además, alnext arranque, el motor no tendrá que cargar con el compresor inmediatamente.</p>
+      </div>
+      
+      <div class="tip-box">
+        <h4>🛣️ 7. Usa el A/C en autopista, ventanas en ciudad</h4>
+        <p>A alta velocidad, abrir ventanas crea más resistencia aerodinámica que el A/C. En ciudad, a baja velocidad, las ventanas pueden ser más eficientes.</p>
+      </div>
+      
+      <div class="tip-box">
+        <h4>🧹 8. Mantén el filtro limpio</h4>
+        <p>Un filtro obstruido obliga al sistema a trabajar más duro, aumentando el consumo. Cámbialo cada 15,000-20,000 km.</p>
+      </div>
+      
+      <div class="tip-box">
+        <h4>☀️ 9. Estaciona a la sombra</h4>
+        <p>Un auto al sol puede alcanzar temperaturas de 50-60°C adentro. Estacionar en sombra reduce drásticamente la necesidad de enfriamiento intenso.</p>
+      </div>
+      
+      <div class="tip-box">
+        <h4>🌬️ 10. Usa los ventiladores estratégicamente</h4>
+        <p>Cuando no necesites frío, usa solo el ventilador sin refrigeración. Esto consume mucha menos energía.</p>
+      </div>
+
+      <div class="warning-box">
+        <h4>⚠️ Cuidado con el modo ECO</h4>
+        <p>En algunos autos, el modo ECO reduce el rendimiento del A/C drásticamente. Si vas en clima muy caluroso, el modo normal puede ser más eficiente que forzar el sistema.</p>
+      </div>
+
+      <h2>A/C y Batería: Consejos Adicionales</h2>
+      <p>Si tienes problemas de batería, el A/C puede ser un factor agravante:</p>
+      <ul>
+        <li><strong>No dejes el A/C encendido con el motor apagado:</strong> Esto descarga la batería rápidamente</li>
+        <li><strong>Usa el modo economía:</strong> Reduce la carga del alternador y la batería</li>
+        <li><strong>Revisa el alternador:</strong> Un alternador defectuoso no puede recargar la batería mientras el A/C funciona</li>
+      </ul>
+
+      <div class="highlight">
+        <strong>Dato importante:</strong> El mayor consumo del A/C ocurre cuando lo enciendes. Después de unos minutos, el consumo se estabiliza. Por eso es mejor mantenerlo prendido a apagar y encender constantemente.
+      </div>
+
+      <div class="cta-box">
+        <h3>¿Tu Batería Se Descarga Rápido?</h3>
+        <p>Si notas que la batería se debilita con el uso del A/C, es recomendable revisar el sistema eléctrico. Contáctanos para una revisión.</p>
+        <a href="https://wa.me/523314851420" target="_blank">Agendar Revisión por WhatsApp</a>
+      </div>
+
+      <div class="related-section">
+        <h3>También te podría interesar</h3>
+        <div class="related-grid">
+          <a href="/blog/mantenimiento-preventivo.html" class="related-card">
+            <div class="related-card-content">
+              <h4>Mantenimiento Preventivo del A/C</h4>
+              <p>Guía completa para cuidar el sistema de aire acondicionado.</p>
+            </div>
+          </a>
+          <a href="/blog/diagnosticar-problemas-ac.html" class="related-card">
+            <div class="related-card-content">
+              <h4>Cómo Diagnosticar Problemas del A/C</h4>
+              <p>Aprende a identificar fallas antes de ir al taller.</p>
+            </div>
+          </a>
+          <a href="/blog/olor-ac-coche.html" class="related-card">
+            <div class="related-card-content">
+              <h4>Por Qué el A/C Huele Mal</h4>
+              <p>Causas y soluciones para los olores del aire acondicionado.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Autoclimas Mateo | Aire Acondicionado Automotriz en Tonalá</p>
+  </footer>
+</body>
+</html>
