@@ -6,99 +6,167 @@
   <title>Guía Completa: Mantenimiento Preventivo del A/C de Tu Auto | Autoclimas Mateo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root { --primary: #0077B6; --accent: #00B4D8; --cool-white: #F8FCFD; --dark: #0A1628; --gray: #64748B; }
+    :root {
+      --primary: #0077B6;
+      --primary-dark: #005A8D;
+      --accent: #00B4D8;
+      --accent-light: #90E0EF;
+      --cool-white: #F8FCFD;
+      --white: #FFFFFF;
+      --dark: #0A1628;
+      --dark-light: #1E293B;
+      --gray: #64748B;
+      --gray-light: #F1F5F9;
+      --success: #10B981;
+      --warning: #F59E0B;
+      --danger: #E53935;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Outfit', sans-serif; background: var(--cool-white); color: var(--dark); line-height: 1.7; }
-    .container { max-width: 800px; margin: 0 auto; padding: 2rem; }
-    header { background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); padding: 2rem; text-align: center; }
-    header h1 { color: white; font-size: 1.8rem; margin-bottom: 0.5rem; }
-    header a { color: white; text-decoration: none; }
-    .meta { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
-    article { background: white; padding: 3rem; border-radius: 20px; margin-top: -2rem; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
-    h2 { color: var(--primary); margin: 2rem 0 1rem; font-size: 1.5rem; }
-    ul, ol { margin-left: 1.5rem; margin-bottom: 1rem; }
-    li { margin-bottom: 0.5rem; }
-    .highlight { background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(0,119,182,0.1)); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--primary); margin: 1.5rem 0; }
-    .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-    .tip-card { background: var(--cool-white); padding: 1.5rem; border-radius: 12px; text-align: center; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--gray-light); color: var(--dark); line-height: 1.7; }
+    
+    nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); z-index: 1000; padding: 0.75rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    nav .container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.25rem; font-weight: 800; color: var(--dark); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .logo-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .logo-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--gray); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+    
+    .banner { width: 100%; padding: 0.5rem; background: linear-gradient(135deg, #0A1628, #1a365d); text-align: center; margin-top: 60px; }
+    .banner img { max-width: 100%; max-height: 80px; border-radius: 8px; }
+
+    .article-container { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--dark); line-height: 1.2; }
+    .article-meta { color: var(--gray); font-size: 0.9rem; }
+    .article-meta a { color: var(--primary); text-decoration: none; }
+    .article-meta a:hover { text-decoration: underline; }
+    .article-content { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .article-content h2 { color: var(--primary); margin: 2rem 0 1rem; font-size: 1.4rem; font-weight: 700; }
+    .article-content h3 { color: var(--dark); margin: 1.5rem 0 0.75rem; font-weight: 600; }
+    .article-content p { margin-bottom: 1rem; color: var(--dark-light); }
+    .article-content ul, .article-content ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+    .article-content li { margin-bottom: 0.5rem; color: var(--dark-light); }
+    
+    .highlight { background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(0,119,182,0.1)); padding: 1.25rem; border-radius: 12px; border-left: 4px solid var(--primary); margin: 1.5rem 0; }
+    .highlight strong { color: var(--primary); }
+    
+    .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .tip-card { background: var(--gray-light); padding: 1.25rem; border-radius: 12px; text-align: center; }
     .tip-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    .tip-card h4 { color: var(--dark); margin-bottom: 0.5rem; font-size: 1rem; }
+    .tip-card p { color: var(--gray); font-size: 0.9rem; margin: 0; }
+    
     .cta-box { background: var(--dark); color: white; padding: 2rem; border-radius: 16px; text-align: center; margin: 2rem 0; }
-    .cta-box a { display: inline-block; background: #25D366; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem; }
-    footer { text-align: center; padding: 2rem; color: var(--gray); }
-    @media (max-width: 768px) { article { padding: 1.5rem; } }
+    .cta-box h3 { color: white; margin-bottom: 0.75rem; }
+    .cta-box p { color: rgba(255,255,255,0.8); margin-bottom: 1rem; }
+    .cta-box a { display: inline-block; background: #25D366; color: white; padding: 0.875rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s; }
+    .cta-box a:hover { transform: translateY(-2px); }
+    
+    footer { background: var(--dark); color: white; padding: 2rem; text-align: center; }
+    footer p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin: 0; }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .article-header h1 { font-size: 1.5rem; }
+      .article-content { padding: 1.5rem; }
+    }
   </style>
 </head>
 <body>
-  <header>
+  <nav>
     <div class="container">
-      <h1>🛡️ Guía Completa: Mantenimiento Preventivo del A/C de Tu Auto</h1>
-      <p class="meta">Publicado el 10 de enero de 2025 | Por Autoclimas Mateo</p>
-      <p><a href="/">← Volver al inicio</a></p>
-    </div>
-  </header>
-  <article>
-    <p>El mantenimiento preventivo es la mejor manera de evitar fallas costosas en el sistema de aire acondicionado de tu vehículo. En esta guía, te explicamos todo lo que necesitas saber para mantener tu A/C en óptimas condiciones.</p>
-
-    <h2>¿Por Qué es Importante el Mantenimiento Preventivo?</h2>
-    <p>Un sistema de A/C bien mantenido:</p>
-    <ul>
-      <li>✅ Funciona de manera más eficiente</li>
-      <li>✅ Consume menos combustible</li>
-      <li>✅ Tiene mayor vida útil</li>
-      <li>✅ Previene reparaciones costosas</li>
-      <li>✅ Mejora la calidad del aire dentro del vehículo</li>
-    </ul>
-
-    <h2>🔧 Checklist de Mantenimiento Preventivo</h2>
-    <div class="tips-grid">
-      <div class="tip-card">
-        <div class="tip-icon">🔍</div>
-        <h3>Revisión Anual</h3>
-        <p>Lleva tu auto a revisión al menos una vez al año antes del verano.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-icon">🌬️</div>
-        <h3>Cambio de Filtro</h3>
-        <p>Cambia el filtro de cabina cada 12-15 meses o cada 20,000 km.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-icon">❄️</div>
-        <h3>Verificación de Gas</h3>
-        <p>Revisa el nivel de refrigerante y busca posibles fugas.</p>
-      </div>
-      <div class="tip-card">
-        <div class="tip-icon">🧹</div>
-        <h3>Limpieza de Serpentín</h3>
-        <p> Limpia el evaporador y condensador para evitar obstrucciones.</p>
-      </div>
-    </div>
-
-    <h2>📅 ¿Cada Cuándo Hacer Servicio?</h2>
-    <ul>
-      <li><strong>Cada 6 meses:</strong> Encendido del sistema para evitar que las piezas se sequen</li>
-      <li><strong>Cada año:</strong> Revisión completa y recarga de gas si es necesario</li>
-      <li><strong>Cada 2 años:</strong> Cambio de filtro de cabina</li>
-      <li><strong>Cada 50,000 km:</strong> Inspección profunda del sistema</li>
-    </ul>
-
-    <h2>💡 Tips Adicionales</h2>
-    <div class="highlight">
-      <ul>
-        <li>Enciende el A/C unos minutos antes de conducir para eliminar humedad</li>
-        <li>Usa la función de recirculación solo cuando sea necesario</li>
-        <li>Estaciona a la sombra para reducir la carga térmica</li>
-        <li>No dejes el A/C encendido cuando el motor está apagado</li>
+      <a href="/" class="logo">
+        <div class="logo-icon"><img src="../images/logo.webp" alt="Autoclimas Mateo"></div>
+        Autoclimas Mateo
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#servicios">Servicios</a></li>
+        <li><a href="/#blog">Blog</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
       </ul>
+      <a href="https://wa.me/523314851420" class="nav-cta" target="_blank">WhatsApp</a>
     </div>
+  </nav>
 
-    <div class="cta-box">
-      <h3>¿Cuánto tiempo tiene tu auto sin servicio de A/C?</h3>
-      <p>Agenda tu mantenimiento preventivo hoy y evita problemas mayores.</p>
-      <a href="https://wa.me/523314851420" target="_blank">📱 Agendar Cita por WhatsApp</a>
+  <div class="banner">
+    <img src="../images/banner.png" alt="Autoclimas Mateo">
+  </div>
+
+  <div class="article-container">
+    <div class="article-header">
+      <h1>Guía Completa: Mantenimiento Preventivo del A/C de Tu Auto</h1>
+      <p class="article-meta">10 de enero de 2025 · <a href="/">Volver al inicio</a></p>
     </div>
-  </article>
+    
+    <div class="article-content">
+      <p>El mantenimiento preventivo es la mejor manera de evitar fallas costosas en el sistema de aire acondicionado de tu vehículo. En esta guía, te explicamos todo lo que necesitas saber para mantener tu A/C en óptimas condiciones.</p>
+
+      <h2>¿Por Qué es Importante el Mantenimiento Preventivo?</h2>
+      <p>Un sistema de A/C bien mantenido:</p>
+      <ul>
+        <li>Funciona de manera más eficiente</li>
+        <li>Consume menos combustible</li>
+        <li>Tiene mayor vida útil</li>
+        <li>Previene reparaciones costosas</li>
+        <li>Mejora la calidad del aire dentro del vehículo</li>
+      </ul>
+
+      <h2>Checklist de Mantenimiento Preventivo</h2>
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon">🔍</div>
+          <h4>Revisión Anual</h4>
+          <p>Lleva tu auto a revisión al menos una vez al año antes del verano.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🌬️</div>
+          <h4>Cambio de Filtro</h4>
+          <p>Cambia el filtro de cabina cada 12-15 meses o cada 20,000 km.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">❄️</div>
+          <h4>Verificación de Gas</h4>
+          <p>Revisa el nivel de refrigerante y busca posibles fugas.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🧹</div>
+          <h4>Limpieza de Serpentín</h4>
+          <p>Limpia el evaporador y condensador para evitar obstrucciones.</p>
+        </div>
+      </div>
+
+      <h2>¿Cada Cuándo Hacer Servicio?</h2>
+      <ul>
+        <li><strong>Cada 6 meses:</strong> Encendido del sistema para evitar que las piezas se sequen</li>
+        <li><strong>Cada año:</strong> Revisión completa y recarga de gas si es necesario</li>
+        <li><strong>Cada 2 años:</strong> Cambio de filtro de cabina</li>
+        <li><strong>Cada 50,000 km:</strong> Inspección profunda del sistema</li>
+      </ul>
+
+      <h2>Tips Adicionales</h2>
+      <div class="highlight">
+        <ul>
+          <li>Enciende el A/C unos minutos antes de conducir para eliminar humedad</li>
+          <li>Usa la función de recirculación solo cuando sea necesario</li>
+          <li>Estaciona a la sombra para reducir la carga térmica</li>
+          <li>No dejes el A/C encendido cuando el motor está apagado</li>
+        </ul>
+      </div>
+
+      <div class="cta-box">
+        <h3>¿Cuánto tiempo tiene tu auto sin servicio de A/C?</h3>
+        <p>Agenda tu mantenimiento preventivo hoy y evita problemas mayores.</p>
+        <a href="https://wa.me/523314851420" target="_blank">Agendar Cita por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <p>© 2025 Autoclimas Mateo | Aire Acondicionado Automotriz en Tonalá</p>
   </footer>

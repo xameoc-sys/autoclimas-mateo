@@ -6,7 +6,7 @@
   <title>5 Señales de Que Tu Aire Acondicionado Necesita Servicio | Autoclimas Mateo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
       --primary: #0077B6;
@@ -14,70 +14,198 @@
       --accent: #00B4D8;
       --accent-light: #90E0EF;
       --cool-white: #F8FCFD;
+      --white: #FFFFFF;
       --dark: #0A1628;
+      --dark-light: #1E293B;
       --gray: #64748B;
+      --gray-light: #F1F5F9;
       --success: #10B981;
+      --warning: #F59E0B;
+      --danger: #E53935;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Outfit', sans-serif; background: var(--cool-white); color: var(--dark); line-height: 1.7; }
-    .container { max-width: 800px; margin: 0 auto; padding: 2rem; }
-    header { background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%); padding: 2rem; text-align: center; }
-    header h1 { color: white; font-size: 2rem; margin-bottom: 0.5rem; }
-    header a { color: white; text-decoration: none; }
-    .meta { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
-    article { background: white; padding: 3rem; border-radius: 20px; margin-top: -2rem; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
-    h2 { color: var(--primary); margin: 2rem 0 1rem; font-size: 1.5rem; }
-    h3 { color: var(--dark); margin: 1.5rem 0 0.75rem; }
-    ul, ol { margin-left: 1.5rem; margin-bottom: 1rem; }
-    li { margin-bottom: 0.5rem; }
-    .highlight { background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(0,119,182,0.1)); padding: 1.5rem; border-radius: 12px; border-left: 4px solid var(--primary); margin: 1.5rem 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--gray-light); color: var(--dark); line-height: 1.7; }
+    
+    /* Navigation */
+    nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); z-index: 1000; padding: 0.75rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    nav .container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.25rem; font-weight: 800; color: var(--dark); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .logo-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .logo-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--gray); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+    
+    /* Banner */
+    .banner { width: 100%; padding: 0.5rem; background: linear-gradient(135deg, #0A1628, #1a365d); text-align: center; margin-top: 60px; }
+    .banner img { max-width: 100%; max-height: 80px; border-radius: 8px; }
+
+    /* Article */
+    .article-container { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--dark); line-height: 1.2; }
+    .article-meta { color: var(--gray); font-size: 0.9rem; }
+    .article-meta a { color: var(--primary); text-decoration: none; }
+    .article-meta a:hover { text-decoration: underline; }
+    .article-content { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .article-content h2 { color: var(--primary); margin: 2rem 0 1rem; font-size: 1.4rem; font-weight: 700; }
+    .article-content h3 { color: var(--dark); margin: 1.5rem 0 0.75rem; font-weight: 600; }
+    .article-content p { margin-bottom: 1rem; color: var(--dark-light); }
+    .article-content ul, .article-content ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+    .article-content li { margin-bottom: 0.5rem; color: var(--dark-light); }
+    
+    /* Highlight box */
+    .highlight { background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(0,119,182,0.1)); padding: 1.25rem; border-radius: 12px; border-left: 4px solid var(--primary); margin: 1.5rem 0; }
+    .highlight strong { color: var(--primary); }
+    
+    /* CTA Box */
     .cta-box { background: var(--dark); color: white; padding: 2rem; border-radius: 16px; text-align: center; margin: 2rem 0; }
-    .cta-box a { display: inline-block; background: #25D366; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem; }
-    footer { text-align: center; padding: 2rem; color: var(--gray); }
-    @media (max-width: 768px) { article { padding: 1.5rem; } header h1 { font-size: 1.5rem; } }
+    .cta-box h3 { color: white; margin-bottom: 0.75rem; }
+    .cta-box p { color: rgba(255,255,255,0.8); margin-bottom: 1rem; }
+    .cta-box a { display: inline-block; background: #25D366; color: white; padding: 0.875rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s; }
+    .cta-box a:hover { transform: translateY(-2px); }
+    
+    /* Tips grid */
+    .tips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .tip-card { background: var(--gray-light); padding: 1.25rem; border-radius: 12px; text-align: center; }
+    .tip-icon { font-size: 2rem; margin-bottom: 0.5rem; }
+    .tip-card h4 { color: var(--dark); margin-bottom: 0.5rem; font-size: 1rem; }
+    .tip-card p { color: var(--gray); font-size: 0.9rem; margin: 0; }
+    
+    /* Warning/Alert boxes */
+    .alert-box { border-radius: 12px; padding: 1.25rem; margin: 1.5rem 0; display: flex; gap: 1rem; align-items: flex-start; }
+    .alert-box.red { background: rgba(229,57,53,0.1); border: 2px solid var(--danger); }
+    .alert-box.yellow { background: rgba(245,158,11,0.1); border: 2px solid var(--warning); }
+    .alert-icon { font-size: 1.5rem; }
+    .alert-content h3 { margin: 0 0 0.5rem 0; font-size: 1rem; }
+    .alert-content p { margin: 0; font-size: 0.9rem; }
+    
+    /* Problem cards */
+    .problem-card { border: 2px solid #E2E8F0; border-radius: 16px; padding: 1.25rem; margin: 1rem 0; }
+    .problem-card.serious { border-color: var(--danger); background: rgba(229,57,53,0.05); }
+    .problem-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .problem-icon { font-size: 1.5rem; }
+    .problem-title { font-weight: 700; color: var(--dark); }
+    .causes { background: var(--gray-light); padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+    .causes strong { color: var(--gray); font-size: 0.9rem; }
+    .causes ul { margin: 0.5rem 0 0 0; }
+    .solution { background: rgba(16,185,129,0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--success); }
+    .solution strong { color: var(--success); }
+    
+    /* Stats */
+    .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; margin: 2rem 0; }
+    .stat-box { background: var(--dark); color: white; padding: 1.25rem; border-radius: 12px; }
+    .stat-number { font-size: 1.75rem; font-weight: 800; color: var(--accent); }
+    .stat-label { font-size: 0.8rem; opacity: 0.8; }
+    
+    /* Myth/Fact boxes */
+    .myth-box { background: #FEF3C7; border: 2px solid var(--warning); border-radius: 12px; padding: 1.25rem; margin: 1.5rem 0; }
+    .myth-box h3 { color: #B45309; margin-bottom: 0.5rem; }
+    .myth-box p { color: #92400E; margin: 0; }
+    .fact-box { background: #D1FAE5; border: 2px solid var(--success); border-radius: 12px; padding: 1.25rem; margin: 1.5rem 0; }
+    .fact-box h3 { color: #047857; margin-bottom: 0.5rem; }
+    .fact-box p { color: #065F46; margin: 0; }
+    
+    /* Tips list */
+    .tips-list { list-style: none; }
+    .tips-list li { padding: 1rem; background: var(--gray-light); margin-bottom: 0.75rem; border-radius: 8px; display: flex; align-items: flex-start; gap: 1rem; }
+    .tip-number { background: var(--primary); color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+    .tips-list strong { color: var(--dark); }
+    .tips-list p { margin: 0.25rem 0 0 0; color: var(--gray); font-size: 0.9rem; }
+    
+    /* Warning list */
+    .warning-list { list-style: none; }
+    .warning-list li { padding: 0.75rem 0; border-bottom: 1px solid #E2E8F0; display: flex; align-items: center; gap: 0.75rem; }
+    .warning-list li:last-child { border-bottom: none; }
+    .warning-list .emoji { font-size: 1.25rem; }
+    .warning-list strong { color: var(--dark); }
+    
+    /* Damage info */
+    .damage-info { background: var(--gray-light); padding: 1.25rem; border-radius: 12px; margin: 1.5rem 0; }
+    .damage-info h3 { color: var(--danger); margin-bottom: 1rem; }
+    .damage-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+    .damage-item { background: white; padding: 1rem; border-radius: 8px; text-align: center; }
+    .damage-item span { font-size: 1.5rem; display: block; margin-bottom: 0.5rem; }
+    .damage-item p { margin: 0; font-size: 0.85rem; color: var(--gray); }
+    .damage-item strong { color: var(--dark); }
+    
+    /* Footer */
+    footer { background: var(--dark); color: white; padding: 2rem; text-align: center; }
+    footer p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin: 0; }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .article-header h1 { font-size: 1.5rem; }
+      .article-content { padding: 1.5rem; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .tips-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
-  <header>
+  <nav>
     <div class="container">
-      <h1>❄️ 5 Señales de Que Tu Aire Acondicionado Necesita Servicio</h1>
-      <p class="meta">Publicado el 15 de enero de 2025 | Por Autoclimas Mateo</p>
-      <p><a href="/">← Volver al inicio</a></p>
+      <a href="/" class="logo">
+        <div class="logo-icon"><img src="../images/logo.webp" alt="Autoclimas Mateo"></div>
+        Autoclimas Mateo
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#servicios">Servicios</a></li>
+        <li><a href="/#blog">Blog</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+      </ul>
+      <a href="https://wa.me/523314851420" class="nav-cta" target="_blank">WhatsApp</a>
     </div>
-  </header>
-  <article>
-    <p>El aire acondicionado de tu auto es esencial para mantener una temperatura cómoda durante tus viajes. Sin embargo, muchas veces ignoramos las señales de que algo no está funcionando correctamente. En este artículo, te compartimos las 5 señales más comunes de que tu A/C necesita atención profesional.</p>
+  </nav>
 
-    <h2>1. 🦠 Mal Olor al Encender el A/C</h2>
-    <p>Si al prender el aire acondicionado notas un olor desagradable, similares a humedad o hongos, esto indica que hay acumulación de bacterias en el sistema de ventilación. No solo es incómodo, sino que puede afectar la salud de los ocupantes del vehículo.</p>
-    <div class="highlight"><strong>🔧 Solución:</strong> Un servicio de limpieza y sanitización del sistema de ventilación resolverá este problema.</div>
+  <div class="banner">
+    <img src="../images/banner.png" alt="Autoclimas Mateo">
+  </div>
 
-    <h2>2. ❄️ Aire No Sale Suficientemente Frío</h2>
-    <p>Si sientes que el aire que sale de las ventilación no está tan frío como antes, podría ser señal de:</p>
-    <ul>
-      <li>Nivel bajo de refrigerante</li>
-      <li>Problemas en el compresor</li>
-      <li>Filtro de cabina obstruido</li>
-    </ul>
-
-    <h2>3. 🔊 Ruidos Extraños al Encender</h2>
-    <p>Sonidos como chirridos, golpes o ruidos metálicos al activar el A/C nunca son buena señal. Pueden indicar problemas en el compresor, correas flojas o piezas desgastadas.</p>
-
-    <h2>4. 💧 Goteras de Agua en el Interior</h2>
-    <p>Si notas agua dentro del vehículo, especialmente en los tapetes del lado del copiloto, el drenaje del evaporador podría estar obstruido. Esto puede causar daños en el sistema eléctrico si no se atiende a tiempo.</p>
-
-    <h2>5. ⚡ El Ventilador No Funciona Correctamente</h2>
-    <p>Si los niveles de aire son débiles o el ventilador solo funciona en ciertas velocidades, podría haber un problema con el motor del ventilador o los controles eléctricos.</p>
-
-    <h2>✅ ¿Qué Hacer?</h2>
-    <p>Si notas alguna de estas señales, no esperes a que el problema empeore. Un mantenimiento preventivo siempre es más económico que una reparación mayor.</p>
+  <div class="article-container">
+    <div class="article-header">
+      <h1>5 Señales de Que Tu Aire Acondicionado Necesita Servicio</h1>
+      <p class="article-meta">15 de enero de 2025 · <a href="/">Volver al inicio</a></p>
+    </div>
     
-    <div class="cta-box">
-      <h3>¿Tu aire acondicionado presenta alguna de estas señales?</h3>
-      <p>En Autoclimas Mateo offercemos diagnóstico gratuito y servicio profesional garantizado.</p>
-      <a href="https://wa.me/523314851420" target="_blank">📱 Contactar por WhatsApp</a>
+    <div class="article-content">
+      <p>El aire acondicionado de tu auto es esencial para mantener una temperatura cómoda durante tus viajes. Sin embargo, muchas veces ignoramos las señales de que algo no está funcionando correctamente. En este artículo, te compartimos las 5 señales más comunes de que tu A/C necesita atención profesional.</p>
+
+      <h2>1. Mal Olor al Encender el A/C</h2>
+      <p>Si al prender el aire acondicionado notas un olor desagradable, similares a humedad o hongos, esto indica que hay acumulación de bacterias en el sistema de ventilación. No solo es incómodo, sino que puede afectar la salud de los ocupantes del vehículo.</p>
+      <div class="highlight"><strong>Solución:</strong> Un servicio de limpieza y sanitización del sistema de ventilación resolverá este problema.</div>
+
+      <h2>2. Aire No Sale Suficientemente Frío</h2>
+      <p>Si sientes que el aire que sale de las ventilación no está tan frío como antes, podría ser señal de:</p>
+      <ul>
+        <li>Nivel bajo de refrigerante</li>
+        <li>Problemas en el compresor</li>
+        <li>Filtro de cabina obstruido</li>
+      </ul>
+
+      <h2>3. Ruidos Extraños al Encender</h2>
+      <p>Sonidos como chirridos, golpes o ruidos metálicos al activar el A/C nunca son buena señal. Pueden indicar problemas en el compresor, correas flojas o piezas desgastadas.</p>
+
+      <h2>4. Goteras de Agua en el Interior</h2>
+      <p>Si notas agua dentro del vehículo, especialmente en los tapetes del lado del copiloto, el drenaje del evaporador podría estar obstruido. Esto puede causar daños en el sistema eléctrico si no se atiende a tiempo.</p>
+
+      <h2>5. El Ventilador No Funciona Correctamente</h2>
+      <p>Si los niveles de aire son débiles o el ventilador solo funciona en ciertas velocidades, podría haber un problema con el motor del ventilador o los controles eléctricos.</p>
+
+      <h2>¿Qué Hacer?</h2>
+      <p>Si notas alguna de estas señales, no esperes a que el problema empeore. Un mantenimiento preventivo siempre es más económico que una reparación mayor.</p>
+      
+      <div class="cta-box">
+        <h3>¿Tu aire acondicionado presenta alguna de estas señales?</h3>
+        <p>En Autoclimas Mateo ofrecemos diagnóstico gratuito y servicio profesional garantizado.</p>
+        <a href="https://wa.me/523314851420" target="_blank">Contactar por WhatsApp</a>
+      </div>
     </div>
-  </article>
+  </div>
+
   <footer>
     <p>© 2025 Autoclimas Mateo | Aire Acondicionado Automotriz en Tonalá</p>
   </footer>

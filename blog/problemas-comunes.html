@@ -6,146 +6,212 @@
   <title>Problemas Comunes del Aire Acondicionado Automotriz | Autoclimas Mateo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root { --primary: #0077B6; --accent: #00B4D8; --cool-white: #F8FCFD; --dark: #0A1628; --gray: #64748B; --danger: #E53935; }
+    :root {
+      --primary: #0077B6;
+      --primary-dark: #005A8D;
+      --accent: #00B4D8;
+      --accent-light: #90E0EF;
+      --cool-white: #F8FCFD;
+      --white: #FFFFFF;
+      --dark: #0A1628;
+      --dark-light: #1E293B;
+      --gray: #64748B;
+      --gray-light: #F1F5F9;
+      --success: #10B981;
+      --warning: #F59E0B;
+      --danger: #E53935;
+    }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Outfit', sans-serif; background: var(--cool-white); color: var(--dark); line-height: 1.7; }
-    .container { max-width: 800px; margin: 0 auto; padding: 2rem; }
-    header { background: linear-gradient(135deg, var(--danger) 0%, #FF6659 100%); padding: 2rem; text-align: center; }
-    header h1 { color: white; font-size: 1.7rem; margin-bottom: 0.5rem; }
-    header a { color: white; text-decoration: none; }
-    .meta { color: rgba(255,255,255,0.8); font-size: 0.9rem; }
-    article { background: white; padding: 3rem; border-radius: 20px; margin-top: -2rem; box-shadow: 0 10px 40px rgba(0,0,0,0.1); }
-    h2 { color: var(--primary); margin: 2rem 0 1rem; font-size: 1.4rem; }
-    .problem-card { border: 2px solid #E2E8F0; border-radius: 16px; padding: 1.5rem; margin: 1rem 0; }
-    .problem-card.serious { border-color: var(--danger); background: rgba(229, 57, 53, 0.05); }
-    .problem-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
-    .problem-icon { font-size: 2rem; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--gray-light); color: var(--dark); line-height: 1.7; }
+    
+    nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); z-index: 1000; padding: 0.75rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    nav .container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.25rem; font-weight: 800; color: var(--dark); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .logo-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .logo-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--gray); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+    
+    .banner { width: 100%; padding: 0.5rem; background: linear-gradient(135deg, #0A1628, #1a365d); text-align: center; margin-top: 60px; }
+    .banner img { max-width: 100%; max-height: 80px; border-radius: 8px; }
+
+    .article-container { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--dark); line-height: 1.2; }
+    .article-meta { color: var(--gray); font-size: 0.9rem; }
+    .article-meta a { color: var(--primary); text-decoration: none; }
+    .article-meta a:hover { text-decoration: underline; }
+    .article-content { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .article-content h2 { color: var(--primary); margin: 2rem 0 1rem; font-size: 1.4rem; font-weight: 700; }
+    .article-content p { margin-bottom: 1rem; color: var(--dark-light); }
+    .article-content ul { margin-left: 1.5rem; margin-bottom: 1rem; }
+    .article-content li { margin-bottom: 0.5rem; color: var(--dark-light); }
+    
+    .problem-card { border: 2px solid #E2E8F0; border-radius: 16px; padding: 1.25rem; margin: 1rem 0; }
+    .problem-card.serious { border-color: var(--danger); background: rgba(229,57,53,0.05); }
+    .problem-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+    .problem-icon { font-size: 1.5rem; }
     .problem-title { font-weight: 700; color: var(--dark); }
-    .causes { background: #F8FAFC; padding: 1rem; border-radius: 8px; margin: 1rem 0; }
-    .causes strong { color: var(--gray); }
-    .solution { background: rgba(16, 185, 129, 0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--success); }
+    .causes { background: var(--gray-light); padding: 1rem; border-radius: 8px; margin: 1rem 0; }
+    .causes strong { color: var(--gray); font-size: 0.9rem; display: block; margin-bottom: 0.5rem; }
+    .causes ul { margin: 0; }
+    .solution { background: rgba(16,185,129,0.1); padding: 1rem; border-radius: 8px; border-left: 4px solid var(--success); }
     .solution strong { color: var(--success); }
+    
     .cta-box { background: var(--dark); color: white; padding: 2rem; border-radius: 16px; text-align: center; margin: 2rem 0; }
-    .cta-box a { display: inline-block; background: #25D366; color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin-top: 1rem; }
-    footer { text-align: center; padding: 2rem; color: var(--gray); }
-    @media (max-width: 768px) { article { padding: 1.5rem; } }
+    .cta-box h3 { color: white; margin-bottom: 0.75rem; }
+    .cta-box p { color: rgba(255,255,255,0.8); margin-bottom: 1rem; }
+    .cta-box a { display: inline-block; background: #25D366; color: white; padding: 0.875rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s; }
+    .cta-box a:hover { transform: translateY(-2px); }
+    
+    footer { background: var(--dark); color: white; padding: 2rem; text-align: center; }
+    footer p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin: 0; }
+    
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .article-header h1 { font-size: 1.5rem; }
+      .article-content { padding: 1.5rem; }
+    }
   </style>
 </head>
 <body>
-  <header>
+  <nav>
     <div class="container">
-      <h1>🔧 Problemas Comunes del Aire Acondicionado Automotriz</h1>
-      <p class="meta">Publicado el 5 de enero de 2025 | Por Autoclimas Mateo</p>
-      <p><a href="/">← Volver al inicio</a></p>
+      <a href="/" class="logo">
+        <div class="logo-icon"><img src="../images/logo.webp" alt="Autoclimas Mateo"></div>
+        Autoclimas Mateo
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#servicios">Servicios</a></li>
+        <li><a href="/#blog">Blog</a></li>
+        <li><a href="/#contacto">Contacto</a></li>
+      </ul>
+      <a href="https://wa.me/523314851420" class="nav-cta" target="_blank">WhatsApp</a>
     </div>
-  </header>
-  <article>
-    <p>El sistema de aire acondicionado de tu auto puede presentar diversas fallas con el tiempo. Aquí te mostramos los problemas más comunes, sus causas y cómo solucionarlos.</p>
+  </nav>
 
-    <div class="problem-card serious">
-      <div class="problem-header">
-        <span class="problem-icon">🚨</span>
-        <span class="problem-title">1. A/C No Enciende</span>
+  <div class="banner">
+    <img src="../images/banner.png" alt="Autoclimas Mateo">
+  </div>
+
+  <div class="article-container">
+    <div class="article-header">
+      <h1>Problemas Comunes del Aire Acondicionado Automotriz</h1>
+      <p class="article-meta">5 de enero de 2025 · <a href="/">Volver al inicio</a></p>
+    </div>
+    
+    <div class="article-content">
+      <p>El sistema de aire acondicionado de tu auto puede presentar diversas fallas con el tiempo. Aquí te mostramos los problemas más comunes, sus causas y cómo solucionarlos.</p>
+
+      <div class="problem-card serious">
+        <div class="problem-header">
+          <span class="problem-icon">🚨</span>
+          <span class="problem-title">1. A/C No Enciende</span>
+        </div>
+        <div class="causes">
+          <strong>Causas posibles:</strong>
+          <ul>
+            <li>Fusible quemado del sistema de A/C</li>
+            <li>Problema en el relay del compresor</li>
+            <li>Falla en el interruptor de presión</li>
+            <li>Problemas en el módulo de control</li>
+          </ul>
+        </div>
+        <div class="solution">
+          <strong>Solución:</strong> Requiere diagnóstico profesional. No intentes repararlo por tu cuenta.
+        </div>
       </div>
-      <div class="causes">
-        <strong>Causas posibles:</strong>
-        <ul>
-          <li>Fusible quemado del sistema de A/C</li>
-          <li>Problema en el relay del compresor</li>
-          <li>Falla en el interruptor de presión</li>
-          <li>Problemas en el módulo de control</li>
-        </ul>
+
+      <div class="problem-card">
+        <div class="problem-header">
+          <span class="problem-icon">🌡️</span>
+          <span class="problem-title">2. Aire Tibio o Caliente</span>
+        </div>
+        <div class="causes">
+          <strong>Causas posibles:</strong>
+          <ul>
+            <li>Nivel bajo de refrigerante (gas)</li>
+            <li>Compresor dañado o defectuoso</li>
+            <li>Obstrucción en el sistema</li>
+            <li>Termostato malfunctionando</li>
+          </ul>
+        </div>
+        <div class="solution">
+          <strong>Solución:</strong> Llévalo a revisar. Probablemente necesite recarga de gas o reparación del compresor.
+        </div>
       </div>
-      <div class="solution">
-        <strong>Solución:</strong> Requiere diagnóstico profesional. No intentes repararlo por tu cuenta, ya que puede haber componentes eléctricos involucrados.
+
+      <div class="problem-card">
+        <div class="problem-header">
+          <span class="problem-icon">🔊</span>
+          <span class="problem-title">3. Ruidos y Vibraciones</span>
+        </div>
+        <div class="causes">
+          <strong>Causas posibles:</strong>
+          <ul>
+            <li>Piezas sueltas en el compresor</li>
+            <li>Correa dañada o floja</li>
+            <li>Rodamientos desgastados</li>
+            <li>Objetos extraños en el ventilador</li>
+          </ul>
+        </div>
+        <div class="solution">
+          <strong>Solución:</strong> Evita usar el A/C y llévalo a revisión inmediatamente para evitar daños mayores.
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-header">
+          <span class="problem-icon">💧</span>
+          <span class="problem-title">4. Agua dentro del Auto</span>
+        </div>
+        <div class="causes">
+          <strong>Causas posibles:</strong>
+          <ul>
+            <li>Drenaje del evaporador obstruido</li>
+            <li>Manguera de drenaje dañada</li>
+            <li>Entrada de agua por juntas de puertas</li>
+          </ul>
+        </div>
+        <div class="solution">
+          <strong>Solución:</strong> Limpia el drenaje del evaporador. Si persiste, requiere servicio profesional.
+        </div>
+      </div>
+
+      <div class="problem-card">
+        <div class="problem-header">
+          <span class="problem-icon">🐛</span>
+          <span class="problem-title">5. Mal Olor</span>
+        </div>
+        <div class="causes">
+          <strong>Causas posibles:</strong>
+          <ul>
+            <li>Bacterias y hongos en el evaporador</li>
+            <li>Filtro de cabina sucio</li>
+            <li>Hojas o debris en la caja de ventilación</li>
+          </ul>
+        </div>
+        <div class="solution">
+          <strong>Solución:</strong> Cambio de filtro y limpieza del sistema de ventilación con productos sanitizadores.
+        </div>
+      </div>
+
+      <h2>¿Cuándo Ir al Especialista?</h2>
+      <p>Si notas alguno de estos problemas, es mejor actuar rápido. Cuanto más esperes, más costosa puede ser la reparación.</p>
+
+      <div class="cta-box">
+        <h3>¿Tu A/C tiene alguno de estos problemas?</h3>
+        <p>Ofrecemos diagnóstico gratuito y presupuestos sin compromiso.</p>
+        <a href="https://wa.me/523314851420" target="_blank">Diagnóstico Gratis por WhatsApp</a>
       </div>
     </div>
+  </div>
 
-    <div class="problem-card">
-      <div class="problem-header">
-        <span class="problem-icon">🌡️</span>
-        <span class="problem-title">2. Aire Tibio o Caliente</span>
-      </div>
-      <div class="causes">
-        <strong>Causas posibles:</strong>
-        <ul>
-          <li>Nivel bajo de refrigerante (gas)</li>
-          <li>Compresor dañado o defectuoso</li>
-          <li>Obstrucción en el sistema</li>
-          <li>Termostato malfunctionando</li>
-        </ul>
-      </div>
-      <div class="solution">
-        <strong>Solución:</strong> Llévalo a revisar. Probablemente necesite recarga de gas o reparación del compresor.
-      </div>
-    </div>
-
-    <div class="problem-card">
-      <div class="problem-header">
-        <span class="problem-icon">🔊</span>
-        <span class="problem-title">3. Ruidos y Vibraciones</span>
-      </div>
-      <div class="causes">
-        <strong>Causas posibles:</strong>
-        <ul>
-          <li>Piezas sueltas en el compresor</li>
-          <li>Correa dañada o floja</li>
-          <li>Rodamientos desgastados</li>
-          <li>Objetos extraños en el ventilador</li>
-        </ul>
-      </div>
-      <div class="solution">
-        <strong>Solución:</strong> Evita usar el A/C y llévalo a revisión inmediatamente para evitar daños mayores.
-      </div>
-    </div>
-
-    <div class="problem-card">
-      <div class="problem-header">
-        <span class="problem-icon">💧</span>
-        <span class="problem-title">4. Agua dentro del Auto</span>
-      </div>
-      <div class="causes">
-        <strong>Causas posibles:</strong>
-        <ul>
-          <li>Drenaje del evaporador obstruido</li>
-          <li>Manguera de drenaje dañada</li>
-          <li>Entrada de agua por juntas de puertas</li>
-        </ul>
-      </div>
-      <div class="solution">
-        <strong>Solución:</strong> Limpia el drenaje del evaporador. Si persiste, requiere servicio profesional.
-      </div>
-    </div>
-
-    <div class="problem-card">
-      <div class="problem-header">
-        <span class="problem-icon">🐛</span>
-        <span class="problem-title">5. Mal Olor</span>
-      </div>
-      <div class="causes">
-        <strong>Causas posibles:</strong>
-        <ul>
-          <li>Bacterias y hongos en el evaporador</li>
-          <li>Filtro de cabina sucio</li>
-          <li>Hojas o debris en la caja de ventilación</li>
-        </ul>
-      </div>
-      <div class="solution">
-        <strong>Solución:</strong> Cambio de filtro y limpieza del sistema de ventilación con productos sanitizadores.
-      </div>
-    </div>
-
-    <h2>⚠️ ¿Cuándo Ir al Especialista?</h2>
-    <p>Si notas alguno de estos problemas, es mejor actuar rápido. Cuanto más esperes, más costosa puede ser la reparación.</p>
-
-    <div class="cta-box">
-      <h3>¿Tu A/C tiene alguno de estos problemas?</h3>
-      <p>Ofrecemos diagnóstico gratuito y presupuestos sin compromiso.</p>
-      <a href="https://wa.me/523314851420" target="_blank">📱 Diagnóstico Gratis por WhatsApp</a>
-    </div>
-  </article>
   <footer>
     <p>© 2025 Autoclimas Mateo | Aire Acondicionado Automotriz en Tonalá</p>
   </footer>
