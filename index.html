@@ -808,17 +808,26 @@
     /* Banner */
     .banner {
       width: 100%;
-      padding: 2rem 1rem;
-      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      padding: 1rem;
+      background: linear-gradient(135deg, #0A1628 0%, #1a365d 100%);
       text-align: center;
     }
 
     .banner img {
-      max-width: 100%;
+      width: 100%;
+      max-width: 800px;
       height: auto;
-      max-height: 150px;
-      border-radius: 12px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    }
+
+    @media (max-width: 768px) {
+      .banner {
+        padding: 0.75rem;
+      }
+      .banner img {
+        border-radius: 8px;
+      }
     }
 
     /* Hero - Mobile */
@@ -1358,7 +1367,7 @@
 
   <!-- Banner -->
   <div class="banner">
-    <img src="images/logo.webp" alt="Autoclimas Mateo - Aire Acondicionado Automotriz">
+    <img src="images/banner.png" alt="Autoclimas Mateo - Aire Acondicionado Automotriz">
   </div>
 
   <!-- Hero Section -->
