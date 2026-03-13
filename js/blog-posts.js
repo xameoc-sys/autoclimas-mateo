@@ -1,4 +1,4 @@
-// Blog posts data
+// Blog posts data - Using existing blog images
 const blogPosts = [
   {
     title: "5 Señales de Que Tu Aire Acondicionado Necesita Servicio",
@@ -40,28 +40,28 @@ const blogPosts = [
     excerpt: "Aprende a identificar los signos de problemas antes de visitar el taller.",
     date: "13 de marzo de 2026",
     url: "blog/diagnosticar-problemas-ac.html",
-    image: "images/blog-diagnostico.svg"
+    image: "images/blog-senales.svg"
   },
   {
     title: "Refrigerante R-134a vs R-1234yf: Diferencias",
     excerpt: "Conoce las diferencias entre el refrigerante antiguo y el nuevo.",
     date: "13 de marzo de 2026",
     url: "blog/refrigerante-r134a-vs-r1234yf.html",
-    image: "images/blog-gas.svg"
+    image: "images/blog-mantenimiento.svg"
   },
   {
     title: "Por Qué el A/C de Tu Coche Huele Mal",
     excerpt: "Causas comunes y soluciones para olores del aire acondicionado.",
     date: "13 de marzo de 2026",
     url: "blog/olor-ac-coche.html",
-    image: "images/blog-olor.svg"
+    image: "images/blog-problemas.svg"
   },
   {
     title: "A/C Automático vs Manual: Diferencias y Ventajas",
     excerpt: "Compara los dos sistemas y descubre cuál conviene más.",
     date: "13 de marzo de 2026",
     url: "blog/ac-automatico-vs-manual.html",
-    image: "images/blog-automatico.svg"
+    image: "images/blog-mantenimiento.svg"
   },
   {
     title: "Cómo Ahorrar Batería y Combustible con el A/C",
@@ -75,35 +75,35 @@ const blogPosts = [
     excerpt: "Guía estacional para mantener tu A/C en óptimas condiciones.",
     date: "13 de marzo de 2026",
     url: "blog/cuando-servicio-ac.html",
-    image: "images/blog-tiempo.svg"
+    image: "images/blog-mantenimiento.svg"
   },
   {
     title: "Cuánto Cuesta el Servicio de A/C Automotriz",
     excerpt: "Precios típicos del servicio de aire acondicionado automotriz.",
     date: "13 de marzo de 2026",
     url: "blog/precio-servicio-ac.html",
-    image: "images/blog-precio.svg"
+    image: "images/blog-problemas.svg"
   },
   {
     title: "El A/C del Auto Descarga la Batería",
     excerpt: "Causas y soluciones cuando la batería se descarga con el A/C.",
     date: "13 de marzo de 2026",
     url: "blog/ac-descarga-bateria.html",
-    image: "images/blog-bateria.svg"
+    image: "images/blog-emergencia.svg"
   },
   {
     title: "Climatizador vs A/C Tradicional",
     excerpt: "Cuál sistema conviene más para tu auto.",
     date: "13 de marzo de 2026",
     url: "blog/climatizador-vs-ac-tradicional.html",
-    image: "images/blog-climatizador.svg"
+    image: "images/blog-senales.svg"
   },
   {
     title: "5 Errores Comunes que Dañan el A/C",
     excerpt: "Aprende a evitar estos errores y prolonga la vida de tu sistema.",
     date: "13 de marzo de 2026",
     url: "blog/5-errores-danan-ac.html",
-    image: "images/blog-errores.svg"
+    image: "images/blog-problemas.svg"
   }
 ];
 
@@ -125,7 +125,7 @@ function renderBlogPosts(page) {
   blogGrid.innerHTML = postsToShow.map(post => `
     <div class="blog-card">
       <div class="blog-image">
-        <img src="${post.image}" alt="${post.title}" onerror="this.style.display='none'">
+        <img src="${post.image}" alt="${post.title}" onerror="this.parentElement.style.background='linear-gradient(135deg, #0077B6 0%, #00B4D8 100%)'">
       </div>
       <div class="blog-content">
         <p class="blog-date">${post.date}</p>
