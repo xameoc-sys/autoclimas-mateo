@@ -1,12 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0077B6"/>
-      <stop offset="100%" style="stop-color:#00B4D8"/>
+    <linearGradient id="cargrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d3748"/>
+      <stop offset="100%" style="stop-color:#1a202c"/>
+    </linearGradient>
+    <linearGradient id="acgrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00B4D8"/>
+      <stop offset="100%" style="stop-color:#0077B6"/>
     </linearGradient>
   </defs>
-  <rect width="300" height="200" fill="url(#grad)"/>
-  <circle cx="150" cy="100" r="40" fill="none" stroke="white" stroke-width="4"/>
-  <path d="M130 100 L145 115 L170 85" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="150" y="170" font-family="Arial" font-size="14" fill="white" text-anchor="middle" opacity="0.8">SEÑALES</text>
+  <!-- Car silhouette -->
+  <path d="M50 140 Q50 100 100 90 L130 85 L200 85 L230 95 Q260 100 270 120 L275 140 L25 140 Z" fill="url(#cargrad)"/>
+  <!-- Car windows -->
+  <path d="M105 92 L125 88 L125 110 L100 110 Z" fill="#4A5568"/>
+  <path d="M135 88 L195 88 L220 95 L135 110 Z" fill="#4A5568"/>
+  <!-- AC vents -->
+  <rect x="80" y="60" width="40" height="25" rx="5" fill="url(#acgrad)"/>
+  <line x1="85" y1="68" x2="115" y2="68" stroke="white" stroke-width="2" opacity="0.5"/>
+  <line x1="85" y1="75" x2="115" y2="75" stroke="white" stroke-width="2" opacity="0.5"/>
+  <!-- Frost/snowflake -->
+  <text x="240" y="70" font-size="40" opacity="0.8">❄️</text>
+  <!-- Warning light -->
+  <circle cx="150" cy="55" r="15" fill="#E53E3E"/>
+  <text x="150" y="60" text-anchor="middle" fill="white" font-size="16">!</text>
+  <!-- Text -->
+  <text x="150" y="175" text-anchor="middle" fill="white" font-family="Arial" font-size="14" font-weight="bold" opacity="0.9">SEÑALES DE ALERTA</text>
 </svg>

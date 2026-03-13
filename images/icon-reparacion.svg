@@ -1,15 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#F59E0B"/>
-      <stop offset="100%" style="stop-color:#D97706"/>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a5568"/>
+      <stop offset="50%" style="stop-color:#a0aec0"/>
+      <stop offset="100%" style="stop-color:#2d3748"/>
+    </linearGradient>
+    <linearGradient id="redhandle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#C53030"/>
+      <stop offset="50%" style="stop-color:#E53E3E"/>
+      <stop offset="100%" style="stop-color:#9B2C2C"/>
     </linearGradient>
   </defs>
-  <rect x="20" y="15" width="60" height="70" rx="5" fill="url(#grad)"/>
-  <rect x="30" y="25" width="40" height="50" rx="3" fill="none" stroke="white" stroke-width="2"/>
-  <circle cx="50" cy="40" r="8" fill="white"/>
-  <rect x="40" y="55" width="20" height="3" rx="1" fill="white"/>
-  <rect x="40" y="62" width="15" height="3" rx="1" fill="white"/>
-  <circle cx="65" cy="30" r="6" fill="#E53935"/>
-  <line x1="62" y1="27" x2="68" y2="33" stroke="white" stroke-width="2"/>
+  <!-- Screwdriver -->
+  <rect x="55" y="10" width="10" height="50" fill="url(#metal)"/>
+  <rect x="53" y="5" width="14" height="8" rx="2" fill="url(#redhandle)"/>
+  <polygon points="60,60 55,70 65,70" fill="url(#metal)"/>
+  <!-- Wrench diagonal -->
+  <g transform="rotate(45 60 60)">
+    <rect x="20" y="55" width="60" height="10" rx="2" fill="url(#metal)"/>
+    <circle cx="15" cy="60" r="12" fill="none" stroke="url(#metal)" stroke-width="6"/>
+    <circle cx="15" cy="60" r="8" fill="#1a202c"/>
+  </g>
+  <!-- Gear background -->
+  <circle cx="85" cy="85" r="20" fill="none" stroke="#4a5568" stroke-width="4" opacity="0.3"/>
+  <circle cx="85" cy="85" r="12" fill="none" stroke="#4a5568" stroke-width="2" opacity="0.3"/>
 </svg>

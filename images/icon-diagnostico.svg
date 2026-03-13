@@ -1,15 +1,28 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#00B4D8"/>
-      <stop offset="100%" style="stop-color:#0077B6"/>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4a5568"/>
+      <stop offset="50%" style="stop-color:#718096"/>
+      <stop offset="100%" style="stop-color:#4a5568"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E53E3E"/>
+      <stop offset="50%" style="stop-color:#FC8181"/>
+      <stop offset="100%" style="stop-color:#C53030"/>
     </linearGradient>
   </defs>
-  <rect x="15" y="25" width="70" height="50" rx="5" fill="url(#grad)"/>
-  <circle cx="50" cy="45" r="12" fill="none" stroke="white" stroke-width="3"/>
-  <circle cx="50" cy="45" r="5" fill="white"/>
-  <rect x="47" y="57" width="6" height="15" rx="2" fill="white"/>
-  <line x1="25" y1="35" x2="35" y2="35" stroke="white" stroke-width="2"/>
-  <line x1="25" y1="42" x2="40" y2="42" stroke="white" stroke-width="2"/>
-  <line x1="25" y1="49" x2="35" y2="49" stroke="white" stroke-width="2"/>
+  <!-- Gauge body -->
+  <circle cx="60" cy="60" r="45" fill="#1a202c" stroke="url(#metal)" stroke-width="3"/>
+  <circle cx="60" cy="60" r="38" fill="#2d3748"/>
+  <!-- Gauge markings -->
+  <circle cx="60" cy="60" r="32" fill="none" stroke="#4a5568" stroke-width="1"/>
+  <circle cx="60" cy="60" r="25" fill="none" stroke="#4a5568" stroke-width="0.5"/>
+  <!-- Needle -->
+  <polygon points="60,30 56,60 64,60" fill="#FC8181"/>
+  <circle cx="60" cy="60" r="5" fill="#E53E3E"/>
+  <!-- Display numbers -->
+  <text x="60" y="75" text-anchor="middle" fill="#48BB78" font-family="monospace" font-size="8">PSI</text>
+  <!-- Refrigerant lines hint -->
+  <path d="M15 60 Q30 50 45 55" stroke="#00B4D8" stroke-width="2" fill="none" opacity="0.6"/>
+  <path d="M105 60 Q90 70 75 65" stroke="#00B4D8" stroke-width="2" fill="none" opacity="0.6"/>
 </svg>
