@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuándo es el Mejor Momento para Hacer Servicio al A/C | Autoclimas Mateo</title>
+  <meta name="description" content="Descubre cuándo es el mejor momento para darle servicio al aire acondicionado de tu auto. Guía estacional para mantener tu A/C en óptimas condiciones.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --primary: #0077B6; --primary-dark: #005A8D; --accent: #00B4D8; --accent-light: #90E0EF; --cool-white: #F8FCFD; --white: #FFFFFF; --dark: #0A1628; --dark-light: #1E293B; --gray: #64748B; --gray-light: #F1F5F9; --success: #10B981; --warning: #F59E0B; --danger: #E53935; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Outfit', sans-serif; background: var(--gray-light); color: var(--dark); line-height: 1.7; }
+    
+    nav { position: fixed; top: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(20px); z-index: 1000; padding: 0.75rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    nav .container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.25rem; font-weight: 800; color: var(--dark); text-decoration: none; display: flex; align-items: center; gap: 0.5rem; }
+    .logo-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .logo-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--gray); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--primary); }
+    .nav-cta { background: var(--primary); color: white; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 0.9rem; }
+    
+    .banner { width: 100%; padding: 0.5rem; background: linear-gradient(135deg, #0A1628, #1a365d); text-align: center; margin-top: 60px; }
+    .banner img { max-width: 100%; max-height: 80px; border-radius: 8px; }
+
+    .article-container { max-width: 800px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--dark); line-height: 1.2; }
+    .article-meta { color: var(--gray); font-size: 0.9rem; }
+    .article-meta a { color: var(--primary); text-decoration: none; }
+    .article-content { background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .article-content h2 { color: var(--primary); margin: 2rem 0 1rem; font-size: 1.4rem; font-weight: 700; }
+    .article-content h3 { color: var(--dark); margin: 1.5rem 0 0.75rem; font-weight: 600; }
+    .article-content p { margin-bottom: 1rem; color: var(--dark-light); }
+    .article-content ul, .article-content ol { margin-left: 1.5rem; margin-bottom: 1rem; }
+    .article-content li { margin-bottom: 0.5rem; color: var(--dark-light); }
+    
+    .season-card { background: var(--gray-light); padding: 1.25rem; border-radius: 12px; margin: 1.5rem 0; border-left: 4px solid var(--primary); }
+    .season-card h4 { color: var(--dark); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .season-card p { margin: 0; }
+    .season-card.best { border-color: var(--success); background: #D1FAE5; }
+    .season-card.warning { border-color: var(--warning); background: #FEF3C7; }
+    
+    .highlight { background: linear-gradient(135deg, rgba(0,180,216,0.1), rgba(0,119,182,0.1)); padding: 1.25rem; border-radius: 12px; border-left: 4px solid var(--primary); margin: 1.5rem 0; }
+    .highlight strong { color: var(--primary); }
+    
+    .cta-box { background: var(--dark); color: white; padding: 2rem; border-radius: 16px; text-align: center; margin: 2rem 0; }
+    .cta-box h3 { color: white; margin-bottom: 0.75rem; }
+    .cta-box p { color: rgba(255,255,255,0.8); margin-bottom: 1rem; }
+    .cta-box a { display: inline-block; background: #25D366; color: white; padding: 0.875rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; transition: transform 0.3s; }
+    .cta-box a:hover { transform: translateY(-2px); }
+    
+    .related-section { margin-top: 2rem; }
+    .related-section h3 { color: var(--dark); margin-bottom: 1rem; font-size: 1.25rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; }
+    .related-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); text-decoration: none; transition: transform 0.3s, box-shadow 0.3s; }
+    .related-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.12); }
+    .related-card-content { padding: 1rem; }
+    .related-card h4 { color: var(--primary); font-size: 0.95rem; margin-bottom: 0.5rem; line-height: 1.4; }
+    .related-card p { color: var(--gray); font-size: 0.85rem; margin: 0; }
+    
+    footer { background: var(--dark); color: white; padding: 2rem; text-align: center; }
+    footer p { color: rgba(255,255,255,0.6); font-size: 0.9rem; margin: 0; }
+    
+    @media (max-width: 768px) { .nav-links { display: none; } .article-header h1 { font-size: 1.5rem; } .article-content { padding: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <nav><div class="container"><a href="/" class="logo"><div class="logo-icon"><img src="../images/logo.webp" alt="Autoclimas Mateo"></div>Autoclimas Mateo</a><ul class="nav-links"><li><a href="/#servicios">Servicios</a></li><li><a href="/#blog">Blog</a></li><li><a href="/#contacto">Contacto</a></li></ul><a href="https://wa.me/523314851420" class="nav-cta" target="_blank">WhatsApp</a></div></nav>
+  <div class="banner"><img src="../images/banner.png" alt="Autoclimas Mateo"></div>
+
+  <div class="article-container">
+    <div class="article-header"><h1>Cuándo es el Mejor Momento para Hacer Servicio al A/C</h1><p class="article-meta">13 de marzo de 2026 · <a href="/">Volver al inicio</a></p></div>
+    <div class="article-content">
+      <p>El timing perfecto para darle servicio al aire acondicionado de tu auto puede marcar la diferencia entre una reparación sencilla y una costosa. Te explicamos cuándo es el mejor momento para programar tu mantenimiento.</p>
+
+      <h2>El Mejor Momento: Primavera</h2>
+      <div class="season-card best"><h4>✅ Primavera (Marzo-Mayo)</h4><p>Es el momento ideal. Antes de que llegue el calor intenso, puedes probar tu A/C y detectar problemas. Hay menos demanda, más disponibilidad de citas y precios más accesibles.</p></div>
+
+      <h2>Otros Momentos Óptimos</h2>
+      <div class="season-card"><h4>📅 Otoño (Septiembre-Noviembre)</h4><p>Antes del invierno es buen momento para revisar la calefacción y preparar el sistema para el frío.</p></div>
+      <div class="season-card warning"><h4>⚠️ Evita el Verano</h4><p>Los talleres están saturados, los tiempos de espera son largos y los precios pueden subir por alta demanda.</p></div>
+
+      <h2>Señales de Que Necesitas Servicio Ya</h2>
+      <ul><li>El aire no enfría lo suficiente</li><li>Olores raros al encender el A/C</li><li>Ruido del compresor</li><li>Consumo excesivo de combustible</li></ul>
+
+      <h2>Plan de Mantenimiento Recomendado</h2>
+      <ul><li><strong>Anual:</strong> Revisión general y recarga de gas si es necesario</li><li><strong>Cada 2 años:</strong> Cambio de filtro de cabina</li><li><strong>Cada 50,000 km:</strong> Inspección profunda del sistema</li></ul>
+
+      <div class="highlight"><strong>Consejo:</strong> No esperes a que el A/C falle. Un mantenimiento preventivo siempre sale más barato que una reparación de emergencia.</div>
+
+      <div class="cta-box"><h3>¿Ya Programaste Tu Servicio de Primavera?</h3><p>Agenda tu mantenimiento antes de que llegue el calor. Contáctanos hoy.</p><a href="https://wa.me/523314851420" target="_blank">Agendar por WhatsApp</a></div>
+
+      <div class="related-section"><h3>También te podría interesar</h3><div class="related-grid"><a href="/blog/mantenimiento-preventivo.html" class="related-card"><div class="related-card-content"><h4>Mantenimiento Preventivo del A/C</h4><p>Guía completa para cuidar tu sistema.</p></div></a><a href="/blog/diagnosticar-problemas-ac.html" class="related-card"><div class="related-card-content"><h4>Cómo Diagnosticar Problemas del A/C</h4><p>Aprende a identificar fallas.</p></div></a><a href="/blog/problemas-comunes.html" class="related-card"><div class="related-card-content"><h4>Problemas Comunes del A/C</h4><p>Las fallas más frecuentes.</p></div></a></div></div>
+    </div>
+  </div>
+  <footer><p>© 2025 Autoclimas Mateo | Aire Acondicionado Automotriz en Tonalá</p></footer>
+</body>
+</html>

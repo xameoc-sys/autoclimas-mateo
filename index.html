@@ -628,6 +628,45 @@
       gap: 0.75rem;
     }
 
+    /* Blog Pagination */
+    .blog-pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .page-btn {
+      padding: 0.75rem 1.25rem;
+      border: 2px solid var(--accent-light);
+      background: white;
+      color: var(--primary);
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: inherit;
+    }
+
+    .page-btn:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+
+    .page-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+
+    .page-dots {
+      padding: 0 0.5rem;
+      color: var(--gray);
+    }
+
     @media (max-width: 768px) {
       .blog {
         padding: 3rem 1rem;
@@ -1670,57 +1709,11 @@
       <p>Consejos y tips sobre mantenimiento de aire acondicionado automotriz</p>
     </div>
 
-    <div class="blog-grid">
-      <div class="blog-card">
-        <div class="blog-image"><img src="images/blog-senales.svg" alt="Señales"></div>
-        <div class="blog-content">
-          <p class="blog-date">15 de enero de 2025</p>
-          <h3 class="blog-title">5 Señales de Que Tu Aire Acondicionado Necesita Servicio</h3>
-          <p class="blog-excerpt">Aprende a identificar las señales de alerta antes de que sea demasiado tarde.</p>
-          <a href="blog/senales-que-necesitas-servicio.html" class="blog-link">Leer más →</a>
-        </div>
-      </div>
-
-      <div class="blog-card">
-        <div class="blog-image"><img src="images/blog-mantenimiento.svg" alt="Mantenimiento"></div>
-        <div class="blog-content">
-          <p class="blog-date">10 de enero de 2025</p>
-          <h3 class="blog-title">Guía Completa: Mantenimiento Preventivo del A/C</h3>
-          <p class="blog-excerpt">Todo lo que necesitas saber para mantener tu sistema en óptimas condiciones.</p>
-          <a href="blog/mantenimiento-preventivo.html" class="blog-link">Leer más →</a>
-        </div>
-      </div>
-
-      <div class="blog-card">
-        <div class="blog-image"><img src="images/blog-problemas.svg" alt="Problemas"></div>
-        <div class="blog-content">
-          <p class="blog-date">5 de enero de 2025</p>
-          <h3 class="blog-title">Problemas Comunes del Aire Acondicionado</h3>
-          <p class="blog-excerpt">Los 5 problemas más frecuentes y cómo solucionarlos.</p>
-          <a href="blog/problemas-comunes.html" class="blog-link">Leer más →</a>
-        </div>
-      </div>
-
-      <div class="blog-card">
-        <div class="blog-image"><img src="images/blog-ahorro.svg" alt="Ahorro"></div>
-        <div class="blog-content">
-          <p class="blog-date">1 de enero de 2025</p>
-          <h3 class="blog-title">Cómo Ahorrar Combustible con el A/C</h3>
-          <p class="blog-excerpt">Tips para mantenerte fresco sin incrementar tu consumo de gasolina.</p>
-          <a href="blog/ahorrar-combustible.html" class="blog-link">Leer más →</a>
-        </div>
-      </div>
-
-      <div class="blog-card">
-        <div class="blog-image"><img src="images/blog-emergencia.svg" alt="Emergencia"></div>
-        <div class="blog-content">
-          <p class="blog-date">20 de diciembre de 2024</p>
-          <h3 class="blog-title">Señales de Emergencia del A/C</h3>
-          <p class="blog-excerpt">Aprende cuándo debes detener el uso del aire acondicionado inmediatamente.</p>
-          <a href="blog/senales-emergencia.html" class="blog-link">Leer más →</a>
-        </div>
-      </div>
+    <div class="blog-grid" id="blog-grid">
+      <!-- Blog posts loaded dynamically via JavaScript -->
     </div>
+    
+    <div class="blog-pagination" id="blog-pagination"></div>
   </section>
 
   <!-- Reviews Section -->
@@ -1938,6 +1931,9 @@ Enviado desde el formulario web de Autoclimas Mateo`;
       });
     });
   </script>
+  
+  <!-- Blog Posts JavaScript -->
+  <script src="js/blog-posts.js"></script>
 
   <!-- Floating WhatsApp Button -->
   <a href="https://wa.me/523314851420" class="whatsapp-float" target="_blank" title="Contactar por WhatsApp">
